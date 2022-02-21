@@ -2,61 +2,73 @@
     {
         "name": "Monica Lucas",
         "amount": "10,000 USDSC",
-        "img": "./colImg/femaleprofile.png"
+        "img": "./colImg/femaleprofile.png",
+        "id": "1"
     },
     {
         "name": "Lori Hart",
         "amount": "10,000 USDSC",
-        "img": "./colImg/maleprofile.jpg"
+        "img": "./colImg/maleprofile.jpg",
+        "id": "4"
     },
     {
         "name": "Gayle Hicks",
         "amount": "10,000 USDSC",
-        "img": "./colImg/femaleprofile.png"
+        "img": "./colImg/femaleprofile.png",
+        "id": "7"
     },
     {
         "name": "Stacy Long",
         "amount": "10,000 USDSC",
-        "img": "./colImg/maleprofile.jpg"
+        "img": "./colImg/maleprofile.jpg",
+        "id": "10"
     },
     {
         "name": "Mamie Barnett",
         "amount": "10,000 USDSC",
-        "img": "./colImg/femaleprofile.png"
+        "img": "./colImg/femaleprofile.png",
+        "id": "2"
     },
     {
         "name": "Jimmy Wright",
         "amount": "10,000 USDSC",
-        "img": "./colImg/maleprofile.jpg"
+        "img": "./colImg/maleprofile.jpg",
+        "id": "5"
     },
     {
         "name": "Claude Banks",
         "amount": "10,000 USDSC",
-        "img": "./colImg/femaleprofile.png"
+        "img": "./colImg/femaleprofile.png",
+        "id": "8"
     },
     {
         "name": "Ida Chapman",
         "amount": "10,000 USDSC",
-        "img": "./colImg/maleprofile.jpg"
+        "img": "./colImg/maleprofile.jpg",
+        "id": "11"
     },
     {
         "name": "Nicholas Daniels",
         "amount": "10,000 USDSC",
-        "img": "./colImg/femaleprofile.png"
+        "img": "./colImg/femaleprofile.png",
+        "id": "3"
     },
     {
         "name": "Karla Sharp",
         "amount": "10,000 USDSC",
-        "img": "./colImg/maleprofile.jpg"
+        "img": "./colImg/maleprofile.jpg",
+        "id": "6"
     },
     {
         "name": "Franklin Greer",
         "amount": "10,000 USDSC",
-        "img": "./colImg/femaleprofile.png"
+        "img": "./colImg/femaleprofile.png",
+        "id": "9"
     },
     {
         "name": "Fred Ryan",
         "amount": "10,000 USDSC",
-        "img": "./colImg/maleprofile.jpg"
+        "img": "./colImg/maleprofile.jpg",
+        "id": "12"
     }
 ]

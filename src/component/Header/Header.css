@@ -1,6 +1,9 @@
-.headerNav{
+.navbar{
     background-color: transparent;
-    padding: 1.2rem;
+    padding: 0.6rem;
+}
+.navbar.active{
+    background-color: #212428e8;
 }
 .searchBar{
     background-color: rgba(139, 139, 139, 0.219);

@@ -1,44 +1,73 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import './Collections.css';
 
 // import required modules
-import {Breakpoints, FreeMode, Pagination } from "swiper";
+import {FreeMode, Pagination } from "swiper";
+import { Card } from "react-bootstrap";
 
 export default function App() {
+  const [collection, setCollection] = useState([]);
+  useEffect(()=>{
+    fetch('./Collections.json')
+    .then(res => res.json())
+    .then(data => setCollection(data))
+  },[])
   return (
-    <>
+    <div className="container">
+    <h1 className="text-white text-start pt-5">Hot Collections</h1>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        freeMode={true}
+        slidesPerView={1}
+        spaceBetween={10}
         pagination={{
           clickable: true,
         }}
+        loop={true}
         breakpoints={{
-            600:{
+            640:{
                 slidesPerView: 1,
-            }
+                spaceBetween: 20,
+            },
+            768:{
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1024:{
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
         }}
-        modules={[Breakpoints, FreeMode, Pagination]}
+        modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+      {
+        collection.map(allCollection => (
+          <SwiperSlide className="text-white pb-5 ">
+            <Card className="collectionCard">
+               <div className="imgDivCollection">
+                 <img src={allCollection.img} alt="" />
+               </div>
+                
+                <div className="userImg1 mx-auto">
+                  <img src={allCollection.userImg} alt="" />
+                </div>
+               <div className="collectionDescription">
+                  
+                 <h6>{allCollection.name}</h6>
+                 <p>{allCollection.code}</p>
+               </div>
+            </Card>
+          </SwiperSlide>
+        ))
+      }
+        
+      
       </Swiper>
-    </>
+    </div>
   );
 }

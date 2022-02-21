@@ -9,20 +9,23 @@ const TopSellers = () => {
         .then(data => setUser(data))
     },[])
     return (
-        <div  className='container'>
-        <h2>Top User</h2>
-        <div className="row">
+        <div  className='container mx-auto my-5'>
+        <h1 className='text-start text-white pb-3'>Top Users</h1>
+        <div className="row ">
         {
             user.map(topUser =>(
             
                 <div className="col-lg-3 userContainer">
-                   
+                          <div className="divno d-flex">
+                          <span className='me-2 mt-2'>{topUser.id}.</span>
                           <div className="UserImg">
                             <img className='imgUsers' src={topUser.img} alt="" />
                           </div>
+                          </div>
+                          
                           <div className="userDetail">
-                                <p>{topUser.name}</p>
-                                <p>{topUser.amount}</p>
+                                <p className='p1'>{topUser.name}</p>
+                                <p className='p2'>{topUser.amount}</p>
                            </div>
 
                 </div>

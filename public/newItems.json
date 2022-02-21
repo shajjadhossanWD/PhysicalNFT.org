@@ -1,0 +1,98 @@
+[
+    {
+        "img":"./newItem/static-1.jpg",
+        "name": "Sunny Day",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/20",
+        "react": "50",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/static-2.jpg",
+        "name": "Blue Plane",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/22",
+        "react": "80",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/static-3.jpg",
+        "name": "Finally Free",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/11",
+        "react": "97",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/static-4.jpg",
+        "name": "Work From Home",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/15",
+        "react": "73",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/anim-4.webp",
+        "name": "The Truth",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/20",
+        "react": "26",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/static-5.jpg",
+        "name": "Running Puppets",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/24",
+        "react": "45",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/static-6.jpg",
+        "name": "Green Frogman",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/25",
+        "react": "76",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/anim-5.webp",
+        "name": "Loop Donut",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/14",
+        "react": "94",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    }
+]

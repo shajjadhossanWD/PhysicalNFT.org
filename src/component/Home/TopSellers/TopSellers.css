@@ -4,5 +4,27 @@
     color: white;
 }
 .imgUsers{
-    width: 25px;
+    width: 50px;
+    border-radius: 50%;
+}
+.imgUsers:hover{
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+.p1{
+    margin-bottom: -0.4rem;
+    text-align: start;
+}
+.userDetail{
+    margin-left: 0.6rem;
+    margin-top: 0.8rem;
+}
+.UserImg{
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: #FF343F;
+    overflow: hidden;
+}
+.UserImg:hover{
+    border: 2px solid #FF343F;
 }

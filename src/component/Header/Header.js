@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import './Header.css';
 import logo from './logo1.png';
 
 const Header = () => {
+    const [navbar, setNavbar] = useState(false);
+    const changeBackground=()=>{
+        if(window.scrollY >=100){
+            setNavbar(true);
+        }else{
+            setNavbar(false);
+        }
+    }
+    window.addEventListener('scroll', changeBackground)
     return (
         <div>
-            <Navbar expand="lg" className='headerNav' variant="dark">
+            <Navbar expand="lg" className={navbar ? 'navbar active' : 'navbar'} fixed="top" variant="dark">
                 <Container>
                     <Navbar.Brand href="#">
                         <img src={logo} alt="" />
