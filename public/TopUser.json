@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Monica Lucas",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/femaleprofile.png"
+    },
+    {
+        "name": "Lori Hart",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/maleprofile.jpg"
+    },
+    {
+        "name": "Gayle Hicks",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/femaleprofile.png"
+    },
+    {
+        "name": "Stacy Long",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/maleprofile.jpg"
+    },
+    {
+        "name": "Mamie Barnett",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/femaleprofile.png"
+    },
+    {
+        "name": "Jimmy Wright",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/maleprofile.jpg"
+    },
+    {
+        "name": "Claude Banks",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/femaleprofile.png"
+    },
+    {
+        "name": "Ida Chapman",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/maleprofile.jpg"
+    },
+    {
+        "name": "Nicholas Daniels",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/femaleprofile.png"
+    },
+    {
+        "name": "Karla Sharp",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/maleprofile.jpg"
+    },
+    {
+        "name": "Franklin Greer",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/femaleprofile.png"
+    },
+    {
+        "name": "Fred Ryan",
+        "amount": "10,000 USDSC",
+        "img": "./colImg/maleprofile.jpg"
+    }
+]

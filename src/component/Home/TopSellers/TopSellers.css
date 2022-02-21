@@ -1,0 +1,8 @@
+.userContainer{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.imgUsers{
+    width: 25px;
+}

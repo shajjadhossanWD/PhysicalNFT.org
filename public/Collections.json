@@ -1,0 +1,38 @@
+[
+    {
+        "img":"./colImg/coll-1.jpg",
+        "userImg":"./colImg/author-1.jpg",
+        "name":"Abstraction",
+        "code":"ERC - 192"
+    },
+    {
+         "img":"./colImg/coll-2.jpg",
+        "userImg":"./colImg/author-2.jpg",
+        "name":"Patternlicious",
+        "code":"ERC - 61"
+    },
+    {
+         "img":"./colImg/coll-3.jpg",
+        "userImg":"./colImg/author-3.jpg",
+        "name":"Skecthify",
+        "code":"ERC - 126"
+    },
+    {
+         "img":"./colImg/coll-4.jpg",
+        "userImg":"./colImg/author-4.jpg",
+        "name":"Cartoonism",
+        "code":"ERC - 73"
+    },
+    {
+         "img":"./colImg/coll-5.jpg",
+        "userImg":"./colImg/author-5.jpg",
+        "name":"Virtuland",
+        "code":"ERC - 85"
+    },
+    {
+         "img":"./colImg/coll-6.jpg",
+        "userImg":"./colImg/author-6.jpg",
+        "name":"Papercut",
+        "code":"ERC - 42"
+    }
+]

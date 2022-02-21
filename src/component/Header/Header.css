@@ -1,0 +1,85 @@
+.headerNav{
+    background-color: transparent;
+    padding: 1.2rem;
+}
+.searchBar{
+    background-color: rgba(139, 139, 139, 0.219);
+    border-radius: 2rem;
+    height: 2rem;
+    color: white;
+    border: none;
+}
+
+.navItem{
+    color: white !important;
+    font-weight: bold;
+}
+.navItem1{
+    color: white;
+    font-weight: bold;
+}
+.dropdown-menu{
+    padding: 0.25rem 1rem;
+    background-color: #212428c7;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255);
+}
+.dropdown-item{
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: #FF343F;
+    color: white;
+    padding: 0.25rem 1rem;
+}
+.navBtn{
+    text-align: center;
+    color: #fff;
+    border-radius: 28px;
+    font-weight: 800;
+    padding: 0px 14px ;
+    font-size: 13px;
+    border: none;
+    background-color: #FF343F;
+    margin-left: 1rem;
+
+}
+.navBtn:hover{
+    box-shadow: 2px 2px 20px 0px rgba(255, 52, 63, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 970px) {
+   
+    .searchBar{
+        margin-top: 2rem;
+      }
+  
+      .navBtn{
+          width: 30%;
+          margin: 1rem auto;
+          padding: 4px 14px;
+      }
+      .headerNav{
+          background-color: #212428;
+          padding: 1.2rem;
+      }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .searchBar{
+      margin-top: 2rem;
+    }
+
+    .navBtn{
+        width: 30%;
+        margin: 1rem auto;
+        padding: 4px 14px;
+    }
+    .headerNav{
+        background-color: #212428;
+        padding: 1.2rem;
+    }
+  }
