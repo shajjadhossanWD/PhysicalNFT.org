@@ -1,0 +1,58 @@
+[
+    {
+        "img": "./paymentWallet/1.png",
+        "name": "Metamask",
+        "link": "",
+        "description": "Start exploring blockchain applications in seconds. Trusted by over 1 million users.",
+        "title": "Most Popular"
+    },
+    {
+        "img": "./paymentWallet/2.png",
+        "name": "Bitski",
+        "link": "",
+        "description": "Bitski connects communities, creators and brands through unique, ownable content."
+
+    },
+    {
+        "img": "./paymentWallet/3.png",
+        "name": "Fortmatic",
+        "link": "",
+        "description": "Let users access your Ethereum app from anywhere. No more browser extensions."
+
+    },
+    {
+        "img": "./paymentWallet/4.png",
+        "name": "WalletConnect",
+        "link": "",
+        "description": "Open source protocol for connecting decentralised applications to mobile wallets."
+
+    },
+    {
+        "img": "./paymentWallet/5.png",
+        "name": "Coinbase Wallet",
+        "link": "",
+        "description": "The easiest and most secure crypto wallet. ... No Coinbase account required."
+
+    },
+    {
+        "img": "./paymentWallet/6.png",
+        "name": "Arkane",
+        "link": "",
+        "description": "Make it easy to create blockchain applications with secure wallets solutions."
+
+    },
+    {
+        "img": "./paymentWallet/7.png",
+        "name": "Authereum",
+        "link": "",
+        "description": "Your wallet where you want it. Log into your favorite dapps with Authereum."
+
+    },
+    {
+        "img": "./paymentWallet/8.png",
+        "name": "Torus",
+        "link": "",
+        "description": "Open source protocol for connecting decentralised applications to mobile wallets."
+
+    }
+]

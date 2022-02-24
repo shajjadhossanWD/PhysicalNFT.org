@@ -10,8 +10,17 @@ import crs1 from './crs-1.jpg';
 import crs2 from './crs-4.jpg';
 import crs3 from './crs-5.jpg';
 import user from './author-5.jpg';
+import PlaceABidPopUp from "../PlaceABidPopUp/PlaceABidPopUp";
 
 const Banner = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
     return (
         <div className='banner'>
         <h1 className="hidden">hidden text</h1>
@@ -55,7 +64,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="btnDiv">
-                 <button className="btn1">Place a bid</button>
+                 <button onClick={handleClickOpen} className="btn1">Place a bid</button>
                  <button className="btn2">View art work</button>
               </div>
 
@@ -98,7 +107,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="btnDiv">
-                 <button className="btn1">Place a bid</button>
+                 <button onClick={handleClickOpen} className="btn1">Place a bid</button>
                  <button className="btn2">View art work</button>
               </div>
               </div>
@@ -137,14 +146,20 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="btnDiv">
-                 <button className="btn1">Place a bid</button>
+                 <button className="btn1" onClick={handleClickOpen} >Place a bid</button>
                  <button className="btn2">View art work</button>
               </div>
           </div>
           </div>
+          <PlaceABidPopUp
+               open={open}
+               handleClose={handleClose}
+             >
+            </PlaceABidPopUp>
         </SwiperSlide>
 
       </Swiper>
+          
         </div>
     );
 };

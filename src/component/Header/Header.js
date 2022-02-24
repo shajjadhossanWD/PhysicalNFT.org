@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import AlertDialogSlide from '../WalletPopUp/AlertDialogSlide';
 import './Header.css';
 import logo from './logo1.png';
 
 const Header = () => {
     const [navbar, setNavbar] = useState(false);
+    const [open, setOpen] = React.useState(false);
+
     const changeBackground=()=>{
         if(window.scrollY >=100){
             setNavbar(true);
@@ -14,6 +17,13 @@ const Header = () => {
         }
     }
     window.addEventListener('scroll', changeBackground)
+
+    const handleClickOpen = () => {
+        setOpen(true);
+      };
+      const handleClose = () => {
+        setOpen(false);
+      };
     return (
         <div>
             <Navbar expand="lg" className={navbar ? 'navbar active' : 'navbar'} fixed="top" variant="dark">
@@ -59,11 +69,16 @@ const Header = () => {
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#explore1" as={Link} to="rankings">Rankings</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link className="navbarBtn" as={Link} to="/link"><i class="fas fa-wallet"></i></Nav.Link>
+                        <Nav.Link onClick={handleClickOpen} className="navbarBtn" ><i class="fas fa-wallet"></i></Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
                 </Navbar>
+                <AlertDialogSlide
+               open={open}
+               handleClose={handleClose}
+            >
+            </AlertDialogSlide>
         </div>
     );
 };
