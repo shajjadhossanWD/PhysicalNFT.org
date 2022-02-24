@@ -59,7 +59,7 @@ const Header = () => {
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#explore1" as={Link} to="rankings">Rankings</NavDropdown.Item>
                         </NavDropdown>
-                        <button className='navBtn'>Log in</button>
+                        <Nav.Link className="navbarBtn" as={Link} to="/link"><i class="fas fa-wallet"></i></Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

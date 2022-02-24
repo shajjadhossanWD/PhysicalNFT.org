@@ -37,13 +37,13 @@ const Footer = () => {
                 <div className="col-lg-3">
                   <h5>Newsletter</h5>
                   <p>Signup for our newsletter to get the latest news in your inbox.</p>
-                  <InputGroup className="mb-3">
+                  <InputGroup className="mb-3 footerInput">
                     <FormControl
                     placeholder="Recipient's username"
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
                     />
-                    <Button variant="outline-secondary" id="button-addon2">
+                    <Button variant="outline-secondary " className="footerInputBtn" id="button-addon2">
                     Button
                     </Button>
                 </InputGroup>

@@ -59,3 +59,13 @@ a:hover{
 .iconItem i:hover{
     color: #26292D;
 }
+.footerInputBtn{
+    background-color: #FF343F;
+    border: none;
+}
+.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: transparent;
+    border: 1px solid #FF343F;
+}
