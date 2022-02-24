@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import './Activity.css';
+import item from './Itme'
 
 const Activity = () => {
-    const [active, setActive] = useState([]);
+    const [active, setActive] = useState(item);
     
-    useEffect(()=>{
-        fetch('./statusActivity.json')
-        .then(res => res.json())
-        .then(data => setActive(data))
-    },[])
+    // useEffect(()=>{
+    //     fetch('./statusActivity.json')
+    //     .then(res => res.json())
+    //     .then(data => setActive(data))
+        
+    // },[])
 
     const filterItem = (category) =>{
-      const updatedItems = active.filter((curItem)=>{
-        return curItem.status === category;
-      })
+      const updatedItems = item.filter(curItem => curItem.status === category)
       setActive(updatedItems);
     }
+
+
     return (
     
       // <div className="row"></div>

@@ -10,6 +10,7 @@ import './Collections.css';
 // import required modules
 import {FreeMode, Pagination } from "swiper";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function App() {
   const [collection, setCollection] = useState([]);
@@ -54,11 +55,13 @@ export default function App() {
                </div>
                 
                 <div className="userImg1 mx-auto">
+                 <Link to="/user">
                   <img src={allCollection.userImg} alt="" />
+                  </Link>
                 </div>
                <div className="collectionDescription">
                   
-                 <h6>{allCollection.name}</h6>
+                 <Link to="/user" className="userLink"> <h6>{allCollection.name}</h6></Link> 
                  <p>{allCollection.code}</p>
                </div>
             </Card>

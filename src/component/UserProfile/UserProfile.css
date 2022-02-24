@@ -1,0 +1,55 @@
+.userImgIfo{
+    padding-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgDiv{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    
+}
+.userItem{
+    cursor: pointer;
+}
+.imgDiv img{
+    width: 150px;
+    border-radius: 50%;
+}
+.detail{
+    text-align: start;
+    margin-left: 1rem;
+
+}
+.detail h4{
+    color: white;
+}
+.detail p{
+   color: #a2a2a2;
+}
+.followBtn{
+    background-color: #FF343F;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 30px;
+}
+.followers h6{
+    color: white;
+    display: inline-block;
+    margin-right: 1rem;
+}
+.followBtn:hover{
+    box-shadow: 2px 2px 20px 0px rgba(255, 52, 63, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+.nav-pills .nav-link{
+    color: #a2a2a2;
+    border: 1px solid #a2a2a2;
+    margin-right: 1rem;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #FF343F;
+    border: none;
+}

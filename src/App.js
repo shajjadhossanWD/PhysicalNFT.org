@@ -13,6 +13,7 @@ import RealWorld from './component/Explore/RealWorld/RealWorld';
 import TopCreators from './component/TopCreators/TopCreators';
 import Activity from './component/Stats/Activity/Activity';
 import Rankings from './component/Stats/Rankings/Rankings';
+import UserProfile from './component/UserProfile/UserProfile';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/topCreators" element={<TopCreators/>}/>
         <Route path="/activity" element={<Activity/>}/>
         <Route path="/rankings" element={<Rankings/>}/>
+        <Route path="/user/*" element={<UserProfile/>}/>
 
     </Routes>
     <Footer></Footer>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './TopSellers.css';
+import { Link } from 'react-router-dom';
 
 const TopSellers = () => {
     const [user, setUser] = useState([]);
@@ -19,12 +20,14 @@ const TopSellers = () => {
                           <div className="divno d-flex">
                           <span className='me-2 mt-2'>{topUser.id}.</span>
                           <div className="UserImg">
+                           <Link to="/user">
                             <img className='imgUsers' src={topUser.img} alt="" />
+                            </Link>
                           </div>
                           </div>
                           
                           <div className="userDetail">
-                                <p className='p1'>{topUser.name}</p>
+                                <Link className='userLink' to="/user"><p className='p1'>{topUser.name}</p></Link>
                                 <p className='p2'>{topUser.amount}</p>
                            </div>
 

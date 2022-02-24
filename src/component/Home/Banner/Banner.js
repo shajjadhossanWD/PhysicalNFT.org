@@ -11,6 +11,7 @@ import crs2 from './crs-4.jpg';
 import crs3 from './crs-5.jpg';
 import user from './author-5.jpg';
 import PlaceABidPopUp from "../PlaceABidPopUp/PlaceABidPopUp";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const [open, setOpen] = React.useState(false);
@@ -43,11 +44,17 @@ const Banner = () => {
                <h1 className="sliderTitle">Live Arts</h1>
                 <div className="userProfile">
                   <div className="img">
+                  <Link to="/user">
                    <img src={user} alt="user" className="userImg"/>
+
+                  </Link>
                   </div>
                   <div className="detailUser">
+                   <Link to="/user" className="userLink" >
                     <b>Jimmy Wright</b>
+                   </Link>
                     <p>@jimmywright</p>
+                    
                    </div>
                 </div>
 
@@ -89,7 +96,9 @@ const Banner = () => {
                    <img src={user} alt="user" className="userImg"/>
                   </div>
                   <div className="detailUser">
-                    <b>Jimmy Wright</b>
+                   <Link to="/user" className="userLink" >
+                     <b>Jimmy Wright</b>
+                    </Link>
                     <p>@jimmywright</p>
                    </div>
                 </div>
@@ -128,8 +137,10 @@ const Banner = () => {
                    <img src={user} alt="user" className="userImg"/>
                   </div>
                   <div className="detailUser">
+                  <Link to="/user" className="userLink" >
                     <b>Jimmy Wright</b>
                     <p>@jimmywright</p>
+                    </Link>
                    </div>
                 </div>
 

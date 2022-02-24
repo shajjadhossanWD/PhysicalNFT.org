@@ -28,3 +28,7 @@
 .UserImg:hover{
     border: 2px solid #FF343F;
 }
+.userLink{
+    color: white;
+    text-decoration: none;
+}
