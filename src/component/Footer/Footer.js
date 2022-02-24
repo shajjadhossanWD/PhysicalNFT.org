@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import './Footer.css';
 
 const Footer = () => {
+    const [link, setLink] = useState({});
+    useEffect(()=>{
+        fetch("https://dslegends.org/api/social-links.php")
+        .then(res=> res.json())
+        .then(data => setLink(data))
+    },[])
     return (
         <div className="footerDiv">
 
@@ -52,7 +58,18 @@ const Footer = () => {
         
         <div className="copyRight container">
             <p>© Copyright 2022 - DS Legends Pte. Ltd.</p>
-            <p>Follow Tiktokheaven.com</p>
+            <div className="iconDivSocial">
+                Follow Us:
+                <a className="iconItem ms-2" target="_any" href={link.facebook}><i class="fab fa-facebook-f"></i></a>
+                <a className="iconItem" target="_any" href={link.instagram}><i class="fab fa-instagram"></i></a>
+                <a className="iconItem" target="_any" href={link.twitter}><i class="fab fa-twitter"></i></a>
+                <a className="iconItem" target="_any" href={link.tiktok}><i class="fab fa-tiktok"></i></a>
+                <a className="iconItem" target="_any" href={link.linkedin}><i class="fab fa-linkedin-in"></i></a>
+                <a className="iconItem" target="_any" href={link.pinterest}><i class="fab fa-pinterest-p"></i></a>
+                <a className="iconItem" target="_any" href={link.medium}><i class="fab fa-medium-m"></i></a>
+                <a className="iconItem" target="_any" href={link.telegram}><i class="fab fa-telegram-plane"></i></a>
+                <a className="iconItem" target="_any" href={link.discord}><i class="fab fa-discord"></i></a>
+            </div>
         </div>
         </div>
         </div>

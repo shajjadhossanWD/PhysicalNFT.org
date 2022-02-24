@@ -1,0 +1,27 @@
+.pageTitle{
+    padding: 5rem;
+}
+.exploreDiv{
+    border-top: solid 1px rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, .025);
+    padding-bottom: 2rem;
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root{
+    color: white;
+    font-weight: bold;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list{
+    background-color: #212428;
+}
+.textField{
+    color: white !important;
+    border-color: white;
+}

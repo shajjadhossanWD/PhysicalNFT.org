@@ -1,0 +1,14 @@
+.dashboardDiv{
+    background-color: #1A1C33;
+    height: 100vh;
+}
+.dashboardTxt{
+    color: white;
+    line-height: 10px;
+}
+.cardDash{
+    background-color: #272D47;
+}
+svg{
+    color: white;
+}

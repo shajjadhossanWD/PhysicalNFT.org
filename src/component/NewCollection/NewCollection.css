@@ -11,11 +11,11 @@
     padding: 20px 20px 5px 20px;
     border-radius: 20px;
 }
-.img{
+.imgCollection{
     width: 100%;
     border-radius: 20px;
 }
-.img:hover{
+.imgCollection:hover{
     transform: scale(1.02);
     transition: all 0.5s ease-in-out;
 }

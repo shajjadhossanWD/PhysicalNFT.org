@@ -2,4 +2,22 @@
   text-align: center;
   background-color: #212428;
 }
+.tableImg{
+  width: 45px;
+  border-radius: 50%;
+}
 
+
+tbody, td, tfoot, th, thead, tr{
+  padding: 1rem !important;
+} 
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+  color: white;
+}
+.tablePage{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import logo from './logo1.png';
 
@@ -35,39 +36,28 @@ const Header = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link className='navItem' href="#action1">Home</Nav.Link>
+                        <Nav.Link className='navItem' as={Link} to="/home" href="#action1">Home</Nav.Link>
 
                         <NavDropdown.Divider />
                         <NavDropdown className='navItem1 text-white' title="Explore" id="navbarScrollingDropdown">
-                        <NavDropdown.Item href="#explore">Explore</NavDropdown.Item>
+                        <NavDropdown.Item href="#explore" as={Link} to="/explore">Explore</NavDropdown.Item>
+                        <NavDropdown.Divider/>
+                        <NavDropdown.Item href="#art" as={Link} to="/art">Art</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#explore1">Explore1</NavDropdown.Item>
+                        <NavDropdown.Item href="#explore1" as={Link} to="/music">Music</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action2">Something2</NavDropdown.Item>
+                        <NavDropdown.Item href="#action2" as={Link} to="/video">Video</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action3">Something3</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action4">Something4</NavDropdown.Item>
+                        <NavDropdown.Item href="#action3" as={Link} to="/realWorld">Real World</NavDropdown.Item>
                         </NavDropdown>
 
-
-                        <NavDropdown className='navItem1' title="Author" id="navbarScrollingDropdown">
-                        <NavDropdown.Item href="#explore">Explore</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#explore1">Explore1</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action2">Something2</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action3">Something3</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action4">Something4</NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link className='navItem' as={Link} to="/topCreators" href="#action1">Top Creators</Nav.Link>
 
 
                         <NavDropdown className='navItem1' title="Stats" id="navbarScrollingDropdown">
-                        <NavDropdown.Item href="#explore">Explore</NavDropdown.Item>
+                        <NavDropdown.Item href="#explore" as={Link} to="activity">Activity</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#explore1">Explore1</NavDropdown.Item>
+                        <NavDropdown.Item href="#explore1" as={Link} to="rankings">Rankings</NavDropdown.Item>
                         </NavDropdown>
                         <button className='navBtn'>Log in</button>
                     </Nav>

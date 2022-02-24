@@ -94,5 +94,53 @@
         "facebook": "",
         "twit": "",
         "email": ""
+    },
+    {
+        "img":"./newItem/static-7.jpg",
+        "name": "Live Arts",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/14",
+        "react": "94",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/static-8.jpg",
+        "name": "Glass Cube",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/14",
+        "react": "94",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/static-9.jpg",
+        "name": "Red Ocean",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/14",
+        "react": "94",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
+    },
+    {
+        "img":"./newItem/static-2.jpg",
+        "name": "Blue Plane",
+        "time": "0h 0m 0s",
+        "price": "500 USDSC",
+        "quantity": "1/14",
+        "react": "94",
+        "payStatus": "Place a bid",
+        "facebook": "",
+        "twit": "",
+        "email": ""
     }
 ]
