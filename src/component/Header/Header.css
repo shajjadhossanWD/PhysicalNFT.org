@@ -84,7 +84,7 @@
 @media only screen and (max-width: 600px) {
     
     .searchBar{
-      margin-top: 2rem;
+      margin-top: 4rem;
     }
 
     .navbarBtn{
@@ -93,7 +93,7 @@
         padding: 4px 14px;
     }
     .headerNav{
-        background-color: #212428;
+        background-color: #212428 !important;
         padding: 1.2rem;
     }
   }

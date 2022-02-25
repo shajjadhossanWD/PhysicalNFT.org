@@ -69,3 +69,13 @@ a:hover{
     background: transparent;
     border: 1px solid #FF343F;
 }
+
+@media only screen and (max-width: 600px){
+    .iconDivSocial span{
+         display: block;
+    }
+    .iconItem{
+        margin-top: 1rem;
+        display: inline-block;
+    }
+}

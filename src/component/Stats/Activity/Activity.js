@@ -35,7 +35,7 @@ const Activity = () => {
               
                   <Col>
                       <Card className="cardMarket">
-                         <div className="row">
+                         <div className="row activeCard">
                          <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                          <Card.Img src={items.img} className="marketImg" />
                          </div>
@@ -43,9 +43,9 @@ const Activity = () => {
                          <Card.Body>
 
                             <div className="row rowItems">
-                            <div className="col-lg-8 col-md-8 col-sm-8 col-8">
+                            <div className="col-lg-8 col-md-8 col-sm-8 col-8 ActiveDes">
                             <Card.Text className='NameAbout'>Monica Lucas</Card.Text>
-                            <p>{items.description}</p>
+                            <p className="description">{items.description}</p>
                             <p>{items.dataTime}</p>
                             </div>
                             <div className="col-lg-4 col-md-4 col-sm-4 col-4">

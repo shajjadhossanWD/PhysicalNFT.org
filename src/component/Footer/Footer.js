@@ -56,10 +56,13 @@ const Footer = () => {
         <div className="footerCopy">
 
         
-        <div className="copyRight container">
-            <p>© Copyright 2022 - DS Legends Pte. Ltd.</p>
-            <div className="iconDivSocial">
-                Follow Us:
+        <div className="copyRight container row">
+            <div className="col-sm-12">
+               <p>© Copyright 2022 - DS Legends Pte. Ltd.</p>
+            </div>
+            
+            <div className="iconDivSocial col-sm-12">
+               <span>Follow Us: </span> 
                 <a className="iconItem ms-2" target="_any" href={link.facebook}><i class="fab fa-facebook-f"></i></a>
                 <a className="iconItem" target="_any" href={link.instagram}><i class="fab fa-instagram"></i></a>
                 <a className="iconItem" target="_any" href={link.twitter}><i class="fab fa-twitter"></i></a>

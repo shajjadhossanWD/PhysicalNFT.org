@@ -63,3 +63,36 @@
     color: #a2a2a2;
     margin: 0 20px -20px 20px;
 }
+
+@media only screen and (max-width: 600px){
+    .logo{
+      
+        padding: 10px;
+        border-radius: 50%;
+        height: 80%;
+        width: 80%;
+        margin-left: 0rem;
+    }
+
+    .cardMarket{
+        text-align: start;
+        line-height: 10px;
+        padding-left: 10px;
+      
+    
+    }
+    .marketImg{
+          width: 70px;
+    }
+    .activeCard{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .ActiveDes{
+        padding-left: 1rem;
+    }
+    .description{
+        line-height: 21px;
+    }
+}

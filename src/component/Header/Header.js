@@ -33,14 +33,14 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
-                    <Form className="d-flex">
+                    {/* <Form className="d-flex">
                         <FormControl
                         type="search"
                         placeholder="Search"
                         className="me-2 searchBar"
                         aria-label="Search"
                         />
-                    </Form>
+                    </Form> */}
                     <Nav
                         className="ms-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}

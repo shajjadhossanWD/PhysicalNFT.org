@@ -21,3 +21,8 @@ tbody, td, tfoot, th, thead, tr{
   align-items: center;
   justify-content: end;
 }
+@media only screen and (max-width: 600px){
+  .table{
+    overflow: scroll;
+  }
+}

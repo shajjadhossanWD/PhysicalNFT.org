@@ -26,3 +26,9 @@
 .userImg1 img{
     width: 60px;
 }
+
+@media only screen and (max-width: 600px){
+    .userImg1 img{
+        width: 110px;
+    }
+}

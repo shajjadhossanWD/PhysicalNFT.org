@@ -65,7 +65,7 @@ const TopCreators = () => {
             </div>
         </Box>
         <div className='container table'>
-         <Table striped bordered hover variant="dark">
+         <Table striped bordered hover variant="dark" className='table'>
             <thead>
                 <tr>
                 <th>Creator<ArrowDropUpIcon/></th>
