@@ -70,6 +70,32 @@ a:hover{
     border: 1px solid #FF343F;
 }
 
+@media only screen and (max-width: 974px){
+    .iconDivSocial span{
+         display: block;
+    }
+    .iconItem{
+        margin-top: 1rem;
+        display: inline-block;
+    }
+    .copyRight{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        color: #A2A2A2;
+    }
+    .copyRight p{
+        display: inline;
+    }
+    .iconItem{
+        padding: 7px 14px;
+        border-radius: 8px;
+        margin-right: 10px;
+    }
+
+}
+
 @media only screen and (max-width: 600px){
     .iconDivSocial span{
          display: block;
@@ -78,4 +104,20 @@ a:hover{
         margin-top: 1rem;
         display: inline-block;
     }
+    .copyRight{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        color: #A2A2A2;
+    }
+    .copyRight p{
+        display: inline;
+    }
+    .iconItem{
+        padding: 4px 5px;
+        border-radius: 8px;
+        margin-right: 10px;
+    }
+
 }

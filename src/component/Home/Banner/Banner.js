@@ -59,12 +59,12 @@ const Banner = () => {
                 </div>
 
                 <div className="row priceDetail">
-                    <div className="col-6 detail1">
+                    <div className="col-12 col-md-6 col-lg-6 detail1">
                         <p>Current Bid</p>
                         <h1>3.14 ETH</h1>
                         <p>($1255.14)</p>
                     </div>
-                    <div className="col-6 detail2">
+                    <div className="col-12 col-md-6 col-lg-6 detail2">
                     <p>Auction end in</p>
                         <h1>0h 0m 0s</h1>
                         <p>(January 18,2022)</p>
@@ -90,7 +90,7 @@ const Banner = () => {
 
 
               <div className="col-lg-6 sliderInfo">
-           <h1 className="sliderTitle">Glass Cube</h1>
+               <h1 className="sliderTitle">Glass Cube</h1>
                 <div className="userProfile">
                   <div className="img">
                    <img src={user} alt="user" className="userImg"/>
@@ -104,12 +104,12 @@ const Banner = () => {
                 </div>
 
                 <div className="row priceDetail">
-                    <div className="col-6 detail1">
+                    <div className="col-12 col-md-6 col-lg-6 detail1">
                         <p>Current Bid</p>
                         <h1>3.14 ETH</h1>
                         <p>($1255.14)</p>
                     </div>
-                    <div className="col-6 detail2">
+                    <div className="col-12 col-md-6 col-lg-6 detail2">
                     <p>Auction end in</p>
                         <h1>0h 0m 0s</h1>
                         <p>(January 18,2022)</p>
@@ -145,12 +145,12 @@ const Banner = () => {
                 </div>
 
                 <div className="row priceDetail">
-                    <div className="col-6 detail1">
+                    <div className="col-12 col-md-6 col-lg-6 detail1">
                         <p>Current Bid</p>
                         <h1>3.14 ETH</h1>
                         <p>($1255.14)</p>
                     </div>
-                    <div className="col-6 detail2">
+                    <div className="col-12 col-md-6 col-lg-6 detail2">
                     <p>Auction end in</p>
                         <h1>0h 0m 0s</h1>
                         <p>(January 18,2022)</p>

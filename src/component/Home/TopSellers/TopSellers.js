@@ -16,7 +16,7 @@ const TopSellers = () => {
         {
             user.map(topUser =>(
             
-                <div className="col-lg-3 userContainer">
+                <div className=" col-md-4 col-lg-3  userContainer">
                           <div className="divno d-flex">
                           <span className='me-2 mt-2'>{topUser.id}.</span>
                           <div className="UserImg">

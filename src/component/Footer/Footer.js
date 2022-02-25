@@ -15,7 +15,7 @@ const Footer = () => {
         
         <div className='container'>
             <div className="row footer">
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-3">
                 <h5>Marketplace</h5>
                     <p className='menuFooter'><a href='#home'>All NFTs</a></p>
                     <p className='menuFooter'><a href='#home'>Art</a></p>
@@ -24,17 +24,17 @@ const Footer = () => {
                     <p className='menuFooter'><a href='#home'>Videos</a></p>
                     <p className='menuFooter'><a href='#home'>Real World</a></p>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-3">
                   <h5>Resources</h5>
                   <p className='menuFooter'><a href='#home'>Help Center</a></p>
                   <p className='menuFooter'><a href='#home'>Newsletter</a></p>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-3">
                   <h5>Community</h5>
                   <p className='menuFooter'><a href='#home'>Community</a></p>
                   <p className='menuFooter'><a href='#home'>Documentation</a></p>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-3">
                   <h5>Newsletter</h5>
                   <p>Signup for our newsletter to get the latest news in your inbox.</p>
                   <InputGroup className="mb-3 footerInput">
@@ -44,7 +44,7 @@ const Footer = () => {
                     aria-describedby="basic-addon2"
                     />
                     <Button variant="outline-secondary " className="footerInputBtn" id="button-addon2">
-                    Button
+                    <i class="fas fa-arrow-right"></i>
                     </Button>
                 </InputGroup>
                 <p>Your email is safe with us. We don't spam.</p>
@@ -56,12 +56,12 @@ const Footer = () => {
         <div className="footerCopy">
 
         
-        <div className="copyRight container row">
-            <div className="col-sm-12">
-               <p>© Copyright 2022 - DS Legends Pte. Ltd.</p>
-            </div>
+        <div className="copyRight container">
+       
+               <p className='copyText'>© Copyright 2022 - DS Legends Pte. Ltd.</p>
+         
             
-            <div className="iconDivSocial col-sm-12">
+            <div className="iconDivSocial">
                <span>Follow Us: </span> 
                 <a className="iconItem ms-2" target="_any" href={link.facebook}><i class="fab fa-facebook-f"></i></a>
                 <a className="iconItem" target="_any" href={link.instagram}><i class="fab fa-instagram"></i></a>

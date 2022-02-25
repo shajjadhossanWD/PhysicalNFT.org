@@ -29,6 +29,7 @@ export default function AlertDialogSlide({open, handleClose}) {
         aria-describedby="alert-dialog-slide-description"
         className='dialog'
       >
+       <div className='dailogue'>
         <DialogTitle className='titleWallet'><i class="fas fa-user"></i>  My Wallet</DialogTitle>
 
         <DialogContent>
@@ -56,6 +57,7 @@ export default function AlertDialogSlide({open, handleClose}) {
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>
         </DialogActions>
+        </div>
       </Dialog>
     </div>
   );

@@ -9,7 +9,7 @@ const CreateAndSell = () => {
     return (
         <div className='container py-5'>
         <h1 className='text-start text-white pb-3'>Create and Sell Now</h1>
-            <Row xs={1} md={3} lg={3} className="g-4">
+            <Row xs={1} md={2} lg={3} className="g-4">
                 <Col>
                 <Card className="createSellDiv">
                     <Card.Body>

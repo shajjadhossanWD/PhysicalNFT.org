@@ -91,7 +91,7 @@ const Explore = () => {
         </Box>
 
         <div className="container">
-            <Row xs={1} md={4} lg={4} className="g-4">
+            <Row xs={1} md={3} lg={4} className="g-4">
             {
                 collection.map(items=>(
                 <Col>
@@ -116,7 +116,7 @@ const Explore = () => {
             </Row>
             <Pagination 
             className='pagination'
-        count={10} 
+        count={5} 
         variant="outlined" 
         shape="rounded" 
         defaultPage={page}

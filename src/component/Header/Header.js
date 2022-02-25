@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import AlertDialogSlide from '../WalletPopUp/AlertDialogSlide';
 import './Header.css';
@@ -26,13 +26,13 @@ const Header = () => {
       };
     return (
         <div>
-            <Navbar expand="lg" className={navbar ? 'navbar active' : 'navbar'} fixed="top" variant="dark">
+            <Navbar expand="lg" className={navbar ? 'navbar active' : 'navbar'} fixed="top" variant="dark" collapseOnSelect >
                 <Container>
                     <Navbar.Brand href="#">
                         <img src={logo} alt="" />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
+                    <Navbar.Toggle />
+                    <Navbar.Collapse>
                     {/* <Form className="d-flex">
                         <FormControl
                         type="search"

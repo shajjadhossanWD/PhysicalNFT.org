@@ -48,7 +48,7 @@ const UserProfile = () => {
                     <Col sm={12}>
                     <Tab.Content>
                         <Tab.Pane eventKey="first">
-                        <Row xs={1} md={4} lg={4} className="g-4 mx-auto">
+                        <Row xs={1} md={3} lg={4} className="g-4 mx-auto">
                             {
                                 liked.slice(4, 8).map(items=>(
                                 <Col>
@@ -72,7 +72,7 @@ const UserProfile = () => {
                     
                             </Row>                        </Tab.Pane>
                         <Tab.Pane eventKey="second">
-                        <Row xs={1} md={4} lg={4} className="g-4 mx-auto">
+                        <Row xs={1} md={3} lg={4} className="g-4 mx-auto">
                             {
                                 liked.slice(0, 4).map(items=>(
                                 <Col>
@@ -97,7 +97,7 @@ const UserProfile = () => {
                             </Row>
                         </Tab.Pane>
                         <Tab.Pane eventKey="third">
-                        <Row xs={1} md={4} lg={4} className="g-4 mx-auto">
+                        <Row xs={1} md={3} lg={4} className="g-4 mx-auto">
                             {
                                 liked.slice(6, 10).map(items=>(
                                 <Col>

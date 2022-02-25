@@ -24,6 +24,7 @@ export default function PlaceABidPopUp({open, handleClose}) {
         aria-describedby="alert-dialog-slide-description"
         className='dialog'
       >
+      <div className='dailogue'>
         <DialogTitle className='titleWallet'>Place a Bid</DialogTitle>
 
         <DialogContent>
@@ -68,6 +69,7 @@ export default function PlaceABidPopUp({open, handleClose}) {
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>
         </DialogActions>
+        </div>
       </Dialog>
     </div>
   );

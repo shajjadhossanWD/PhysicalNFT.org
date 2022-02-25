@@ -122,4 +122,20 @@
         margin-top: 0rem;
     }
 
+    .detail1{
+        border-bottom: 1px solid #7A7B7D;
+        border-right: none;
+    }
+    .detail2{
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .btnDiv{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
   }

@@ -13,7 +13,7 @@ const NewCollection = () => {
     return (
         <div className='container my-5'>
         <h1 className='text-white text-start'>New NFTs</h1>
-            <Row xs={1} md={4} lg={4} className="g-4">
+            <Row xs={1} md={2} lg={4} className="g-4">
             {
                 collection.slice(0, 4).map(items=>(
                 <Col>
