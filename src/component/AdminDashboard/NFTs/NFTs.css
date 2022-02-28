@@ -1,0 +1,78 @@
+
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: rgba(30, 36, 128, 0.603);
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: rgb(172, 142, 142);
+    --bs-table-active-color: ;
+    --bs-table-hover-color: rgb(153, 115, 115);
+    --bs-table-hover-color: ;
+    s-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: white;
+    vertical-align: top;
+    border-color: #7791ac;
+    font-size: 0.9rem;
+}
+
+
+div.mdb-datatable div.mdb-datatable-filter input {
+    background-color: transparent;
+    margin-left: 52rem;
+    color: white;
+    margin-bottom: -1rem;
+}
+div.mdb-datatable div.mdb-datatable-length label{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: -2.5rem;
+}
+div.mdb-datatable div.mdb-datatable-info {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.NFTsTable{
+    background-color: #272D47;
+    border-radius: 10px;
+    padding: 20px;
+}
+div.mdb-datatable div.mdb-datatable-length select{
+    background-color: transparent;
+    color: white;
+}
+.adminBtnNFT{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #657eda;
+    display: flex;
+    margin-top: 1rem;
+    margin-left: -0.2rem;
+    width: 10%;
+    color: white;
+}
+table.dataTable tbody tr {
+background-color: transparent;
+}
+.someImgClass{
+    width: 100%;
+}
+table.dataTable tbody td {
+    width: 35%;
+}
+.dataTables_wrapper, .dataTables_length select{
+    color: white;
+}
+.my-1{
+    background-color: transparent;
+}
+.dataTables_info{
+    color: white !important;
+}

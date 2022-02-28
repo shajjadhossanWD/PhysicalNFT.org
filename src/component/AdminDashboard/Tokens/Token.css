@@ -1,0 +1,14 @@
+.tokenImg{
+    width: 50px;
+}
+.tokenTable{
+    background-color: #272D47;
+    padding: 20px;
+    border-radius: 10px;
+}
+.tableRow:hover{
+    background-color: #2e3757;
+}
+.tokenDescription{
+    font-size: 0.8rem;
+}

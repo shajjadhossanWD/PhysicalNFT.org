@@ -6,6 +6,8 @@ import Pagination from '@mui/material/Pagination';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 const currencies = [
   
@@ -49,7 +51,9 @@ const Explore = () => {
 
 
     return (
-    
+    <div>
+            <Header></Header>
+
         <div className=' pt-5'>
         <h1 className='text-white pageTitle'>Explore</h1>
       
@@ -128,6 +132,8 @@ const Explore = () => {
       
         </div>
     
+        </div>
+       <Footer></Footer>
         </div>
       
  

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import img1 from "./maleprofile.jpg";
-import img2 from "./author-4.jpg"
-import './Admin.css';
-import AdminPopUp from './AdminPopUp/AdminPopUp';
-import DeletePopUp from './DeletePopUp/DeletePopUp';
+import CreatorsPopUp from './CreatorsPopUp/CreatorsPopUp';
+import DeletePopUp from '../Admin/DeletePopUp/DeletePopUp';
 
-const Admin = () => {
+const Creator = () => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -28,9 +26,9 @@ const Admin = () => {
 
   return (
     <div className='adminBody'>
-    <h5 className='text-white text-start'>Admin</h5>
+    <h5 className='text-white text-start'>Creators</h5>
     <div className='adminCard py-2'>
-        <button onClick={handleClickOpen} className='adminBtn'>New Admin</button>
+        <button onClick={handleClickOpen} className='adminBtn'>New Creator</button>
             <Table className='text-white adminDataTable'>
             
 
@@ -51,18 +49,7 @@ const Admin = () => {
                 <td>samDslegend@gmail.com</td>
                 <td>01787676726</td>
                 <td>
-               <button className='AccessBtn'> <i class="fas fa-user-check"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
-                </td>
-              </tr>
-
-              <tr>
-                <td> <img className='imgAdmin' src={img2} alt="" /></td>
-                <td>Mark</td>
-                <td>Otto@gmail.com</td>
-                <td>01787676726</td>
-                <td>
-               <button className='AccessBtn'> <i class="fas fa-user-check"></i></button>
+               <button className='AccessBtn'><i class="fas fa-pen-alt"></i></button>
                 <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
                 </td>
               </tr>
@@ -73,18 +60,18 @@ const Admin = () => {
                 <td>Shajjadhossan@gamil.com</td>
                 <td>01787676726</td>
                 <td>
-               <button className='AccessBtn'> <i class="fas fa-user-check"></i></button>
+               <button className='AccessBtn'> <i class="fas fa-pen-alt"></i></button>
                 <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
                 </td>
               </tr>
               
             </tbody>
       </Table>
-           <AdminPopUp
+           <CreatorsPopUp
                open={open}
                handleClose={handleClose}
             >
-            </AdminPopUp>
+            </CreatorsPopUp>
 
             <DeletePopUp
               handleCloseDelete={handleCloseDelete}
@@ -101,4 +88,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Creator;

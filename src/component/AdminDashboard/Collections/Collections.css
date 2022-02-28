@@ -1,0 +1,136 @@
+.imgCollections{
+    width: 160px;
+}
+.collectionLink{
+    text-decoration: none;
+}
+.ql-editor{
+    min-height: 330px;
+    background-color: white;
+}
+.ql-snow{
+    background-color: white;
+}
+.MuiSelectUnstyled-root{
+    width: 100%;
+}
+.sectionSelect{
+    margin-left: -0.5rem;
+}
+.selectionItemDes{
+    margin-bottom: -1rem;
+    margin-left: 0.5rem;
+}
+.collectionInput{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgb(158, 159, 206);
+}
+.addItemDiv{
+    background-color: #272D47;
+    padding: 20px;
+    border-radius: 10px;
+}
+.creatorInput{
+    background-color: transparent;
+    border: 1px solid rgb(158, 159, 206);
+    width: 100%;
+    padding: 6px;
+    border-radius: 7px;
+    color: rgb(158, 159, 206);
+}
+.creatorDes p b{
+    color: #859ebb;
+    text-align: start;
+}
+.creatorDes p{
+    margin-bottom: 2px;
+}
+.creatorDes p small{
+    color: #859ebb;
+    text-align: start;
+}
+.blockchainInput{
+    margin-left: -0.5rem;
+}
+.descriptionChain{
+    margin-bottom: -1rem;
+}
+.descriptionChain p{
+    color: white;
+}
+.descriptionChain small{
+    color: #849bb8;
+}
+.pay{
+    color: #849bb8;
+    margin-bottom: -0.3rem;
+} 
+.createBtn{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #657eda;
+    display: flex;
+    margin-top: 1rem;
+}
+.createBtn:hover{
+    background-color: #708FFE;
+}
+.textEditor p{
+    margin-bottom: 0rem;
+}
+.bannerImgDiv{
+    width: 70%;
+    border: 2px dotted #849bb8;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 2rem 10rem;
+    color: #849bb8;
+
+}
+
+.bannerImgDiv i{
+    font-size: 3.5rem;
+}
+
+.bannerImgDiv:hover, .FeaturedImgDiv:hover, .profileImgDiv:hover{
+    border-color: #858a8fc4;
+    color: #858a8fc4;
+}
+.chooseBtn{
+    color: black;
+    border: none;
+    display: flex;
+    margin-right: 0.3rem;
+}
+.choseDiv{
+    display: flex;
+    margin-top: 1.4rem;
+}
+.bannerImg p{
+    margin-bottom: 0rem;
+    color: #afbdce;
+}
+.FeaturedImgDiv{
+    width: 40%;
+    border: 2px dotted #849bb8;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 2rem 10rem;
+    color: #849bb8;
+}
+.FeaturedImgDiv i{
+    font-size: 3.5rem;
+}
+.profileImgDiv{
+    width: 15%;
+    border: 2px dotted #849bb8;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2rem 2rem;
+    color: #849bb8;
+}
+.profileImgDiv i{
+    font-size: 3.5rem;
+}

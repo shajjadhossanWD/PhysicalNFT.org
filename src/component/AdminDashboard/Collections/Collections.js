@@ -1,36 +1,30 @@
 import React from 'react';
+import DeletePopUp from '../Admin/DeletePopUp/DeletePopUp';
 import { Table } from 'react-bootstrap';
-import img1 from "./maleprofile.jpg";
-import img2 from "./author-4.jpg"
-import './Admin.css';
-import AdminPopUp from './AdminPopUp/AdminPopUp';
-import DeletePopUp from './DeletePopUp/DeletePopUp';
+import img1 from './coll-2.jpg';
+import img2 from './coll-3.jpg';
+import './Collections.css';
+import { Link } from 'react-router-dom';
 
-const Admin = () => {
-  const [open, setOpen] = React.useState(false);
+const Collections = () => {
+    const [openDelete, setOpenDelete] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+    const handleClickOpenDelete = () => {
+      setOpenDelete(true);
+    };
+  
+    const handleCloseDelete = () => {
+      setOpenDelete(false);
+    };
 
-  const [openDelete, setOpenDelete] = React.useState(false);
-
-  const handleClickOpenDelete = () => {
-    setOpenDelete(true);
-  };
-
-  const handleCloseDelete = () => {
-    setOpenDelete(false);
-  };
-
-  return (
-    <div className='adminBody'>
-    <h5 className='text-white text-start'>Admin</h5>
+    return (
+        <div>
+            <div className='adminBody'>
+    <h5 className='text-white text-start'>Creators</h5>
     <div className='adminCard py-2'>
-        <button onClick={handleClickOpen} className='adminBtn'>New Admin</button>
+    <Link to='newCollection' className='collectionLink'>
+        <button className='adminBtn'>New Collection</button>
+        </Link>
             <Table className='text-white adminDataTable'>
             
 
@@ -46,45 +40,40 @@ const Admin = () => {
             <tbody>
            
               <tr className='tableRow'>
-                <td> <img className='imgAdmin' src={img1} alt="" /></td>
+                <td> <img className='imgCollections' src={img1} alt="" /></td>
                 <td>Sam</td>
                 <td>samDslegend@gmail.com</td>
                 <td>01787676726</td>
                 <td>
-               <button className='AccessBtn'> <i class="fas fa-user-check"></i></button>
+               <button className='AccessBtn'><i class="fas fa-pen-alt"></i></button>
                 <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
                 </td>
               </tr>
 
-              <tr>
-                <td> <img className='imgAdmin' src={img2} alt="" /></td>
-                <td>Mark</td>
-                <td>Otto@gmail.com</td>
+              <tr className='tableRow'>
+                <td> <img className='imgCollections' src={img2} alt="" /></td>
+                <td>Sam</td>
+                <td>samDslegend@gmail.com</td>
                 <td>01787676726</td>
                 <td>
-               <button className='AccessBtn'> <i class="fas fa-user-check"></i></button>
+               <button className='AccessBtn'><i class="fas fa-pen-alt"></i></button>
                 <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
                 </td>
               </tr>
 
               <tr>
-                <td><img className='imgAdmin' src={img1} alt="" /></td>
+                <td><img className='imgCollections' src={img1} alt="" /></td>
                 <td>Shajjad Hossan</td>
                 <td>Shajjadhossan@gamil.com</td>
                 <td>01787676726</td>
                 <td>
-               <button className='AccessBtn'> <i class="fas fa-user-check"></i></button>
+               <button className='AccessBtn'> <i class="fas fa-pen-alt"></i></button>
                 <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
                 </td>
               </tr>
               
             </tbody>
       </Table>
-           <AdminPopUp
-               open={open}
-               handleClose={handleClose}
-            >
-            </AdminPopUp>
 
             <DeletePopUp
               handleCloseDelete={handleCloseDelete}
@@ -98,7 +87,8 @@ const Admin = () => {
       <p>Copyright © 2022 - DS Legends Pte. Ltd.</p>
     </div>
     </div>
-  );
+        </div>
+    );
 };
 
-export default Admin;
+export default Collections;

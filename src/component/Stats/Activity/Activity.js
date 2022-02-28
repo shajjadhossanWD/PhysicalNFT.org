@@ -1,28 +1,21 @@
 import React, { useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
+import Footer from '../../Footer/Footer';
+import Header from '../../Header/Header';
 import './Activity.css';
 import item from './Itme'
 
 const Activity = () => {
     const [active, setActive] = useState(item);
-    
-    // useEffect(()=>{
-    //     fetch('./statusActivity.json')
-    //     .then(res => res.json())
-    //     .then(data => setActive(data))
-        
-    // },[])
 
     const filterItem = (category) =>{
       const updatedItems = item.filter(curItem => curItem.status === category)
       setActive(updatedItems);
     }
-
-
     return (
     
-      // <div className="row"></div>
-
+  <div>
+      <Header></Header>
     <div className='pt-5'>
       <h1 className='text-white pageTitle'>Activity</h1>
      <div className="exploreDiv py-5">
@@ -86,6 +79,8 @@ const Activity = () => {
         </div>
         </div>   
         </div>
+        </div>
+        <Footer></Footer>
         </div>
     );
 };

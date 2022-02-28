@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Pagination from '@mui/material/Pagination';
+import Header from '../../Header/Header';
+import Footer from '../../Footer/Footer';
 
 const Video = () => {
     const [collection, setCollection] = useState([])
@@ -14,6 +16,8 @@ const Video = () => {
     },[])
 
     return (
+        <div>
+        <Header></Header>
         <div className='pt-5'>
                 <h1 className='text-white pageTitle'>Video</h1>
         <div className="exploreDiv py-5">
@@ -53,6 +57,8 @@ const Video = () => {
         />
         </div>
         </div>
+        </div>
+        <Footer></Footer>
         </div>
     );
 };

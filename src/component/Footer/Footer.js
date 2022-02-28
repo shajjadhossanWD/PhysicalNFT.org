@@ -44,7 +44,7 @@ const Footer = () => {
                     aria-describedby="basic-addon2"
                     />
                     <Button variant="outline-secondary " className="footerInputBtn" id="button-addon2">
-                    <i class="fas fa-arrow-right"></i>
+                    <i className="fas fa-arrow-right"></i>
                     </Button>
                 </InputGroup>
                 <p>Your email is safe with us. We don't spam.</p>

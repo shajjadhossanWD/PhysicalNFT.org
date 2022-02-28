@@ -65,9 +65,9 @@ const Header = () => {
 
 
                         <NavDropdown className='navItem1' title="Stats" id="navbarScrollingDropdown">
-                        <NavDropdown.Item href="#explore" as={Link} to="activity">Activity</NavDropdown.Item>
+                        <NavDropdown.Item href="#explore" as={Link} to="/activity">Activity</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#explore1" as={Link} to="rankings">Rankings</NavDropdown.Item>
+                        <NavDropdown.Item href="#explore1" as={Link} to="/rankings">Rankings</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link onClick={handleClickOpen} className="navbarBtn" ><i class="fas fa-wallet"></i></Nav.Link>
                     </Nav>

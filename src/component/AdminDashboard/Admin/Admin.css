@@ -1,0 +1,65 @@
+.imgAdmin{
+    width: 60px;
+    border-radius: 50%;
+}
+.adminCard{
+    background-color: #272D47;
+    border-radius: 10px;
+}
+.adminBtn{
+    background-color: #6958BE;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.adminDataTable{
+      border: none;
+      
+}
+.tableRow{
+    padding: 2rem;
+}
+.AccessBtn{
+    border: none;
+    background-color: #42C48A;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.deleteBtn{
+    border-radius: 5px;
+    background-color: #EF5858;
+    padding: 5px 5px;
+    border: none;
+    margin-left: 5px;
+}
+.exclamatoryIcon{
+    color: black;
+    font-size: 3rem;
+}
+.delete{
+    background-color: #272D47;
+}
+.deleteDiv p{
+    color: white;
+}
+.Icon{
+    text-align: center;
+    font-size: 4.5rem;
+    color: #EF5858;
+}
+.copyrightAdmin{
+    background-color: #272D47;
+    padding: 10px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+

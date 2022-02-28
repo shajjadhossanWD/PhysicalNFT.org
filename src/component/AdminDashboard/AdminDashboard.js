@@ -8,14 +8,18 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import GridViewIcon from '@mui/icons-material/GridView';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link, Route, Routes } from 'react-router-dom';
 import './AdminDashboard.css';
 import logo from  './logo1.png'
 import Admin from './Admin/Admin';
 import Dashboard from './Dashboard/Dashboard';
 import { Divider } from '@mui/material';
+import Creator from './Creator/Creator';
+import Collections from './Collections/Collections';
+import NFTs from './NFTs/NFTs';
+import Tokens from './Tokens/Tokens';
+import Editor from './Editor/Editor';
+import AddNewCollection from './Collections/AddNewCollection/AddNewCollection';
 // import Dashboard from './Dashboard/Dashboard';
 // import Admin from './Admin/Admin';
 const drawerWidth = 240;
@@ -35,12 +39,16 @@ function AdminDashboard(props) {
     
       <img className='dashLogo' src={logo} alt="" />
       <Divider/>
-       <p><GridViewIcon/> <Link to="">Dashboard</Link></p>
-       <p><AccountCircleIcon/><Link to="adminUser">Admin</Link></p>
-       <p><AccountCircleIcon/><Link to="adminUser">Creator</Link></p>
-       <p><AccountCircleIcon/><Link to="adminUser">Creator</Link></p>
+       <div className="menuDiv">
+       <p><i className="fad fa-th-large"></i><Link to="">Dashboard</Link></p>
+       <p><i className="fas fa-user"></i><Link to="adminUser">Admin</Link></p>
+       <p><i className="fas fa-user-friends"></i><Link to="creator">Creators</Link></p>
+       <p><i className="fas fa-tags"></i><Link to="collections">Collections</Link></p>
+       <p><i className="fas fa-check-circle"></i><Link to="nfts">NFTs</Link></p>
+       <p><i className="fad fa-circle"></i><Link to="tokens">Tokens</Link></p>
+       <p><i className="fas fa-pen-alt"></i><Link to="editor">Editor</Link></p>
 
-      
+       </div>
     </div>
   );
 
@@ -113,10 +121,18 @@ function AdminDashboard(props) {
         className=' dashboardDiv'
       >
         <Toolbar />
+        <div className="contentDiv">
          <Routes>
              <Route path='adminUser' element={<Admin/>}/>
              <Route path='' element={<Dashboard/>}/>
+             <Route path='creator' element={<Creator/>}/>
+             <Route path='collections/*' element={<Collections/>}/>
+             <Route path='nfts' element={<NFTs/>}/>
+             <Route path='tokens' element={<Tokens/>}/>
+             <Route path='editor/*' element={<Editor/>}/>
+             <Route path='collections/newCollection' element={<AddNewCollection/>}/>
          </Routes>
+         </div>
       </Box>
     </Box>
   );

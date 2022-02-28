@@ -6,6 +6,8 @@ import Pagination from '@mui/material/Pagination';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+import Footer from '../../Footer/Footer';
+import Header from '../../Header/Header';
 const currencies = [
   
     {
@@ -29,6 +31,8 @@ const Rankings = () => {
         setCurrency(event.target.value);
       };
     return (
+      <div>
+      <Header></Header>
         <div className='pt-5'>
                 <h1 className='text-white pageTitle'>Rankings</h1>
           
@@ -182,6 +186,8 @@ const Rankings = () => {
             <Pagination className='tablePage' count={2} variant="outlined" shape="rounded" color='secondary' size='large'/> 
         </div>
         </div>
+        </div>
+        <Footer></Footer>
         </div>
         
     );
