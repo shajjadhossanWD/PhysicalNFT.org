@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, NavLink, Route, Routes } from 'react-router-dom';
 import './AdminDashboard.css';
 import logo from  './logo1.png'
 import Admin from './Admin/Admin';
@@ -22,8 +22,15 @@ import Editor from './Editor/Editor';
 import AddNewCollection from './Collections/AddNewCollection/AddNewCollection';
 // import Dashboard from './Dashboard/Dashboard';
 // import Admin from './Admin/Admin';
-const drawerWidth = 240;
+import profileImg from './maleprofile.jpg';
+import AdminProfile from './AdminProfile/AdminProfile';
 
+const menuLinkStyles =({isActive})=>{
+  return{
+      backgroundColor: isActive? '#1A1C33' : '',
+  }
+}
+const drawerWidth = 240;
 function AdminDashboard(props) {
 //   let { path, url } = useRouteMatch();
   const { window } = props;
@@ -32,7 +39,6 @@ function AdminDashboard(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
   const drawer = (
     <div className='sideBar'>
       <Toolbar />
@@ -40,13 +46,13 @@ function AdminDashboard(props) {
       <img className='dashLogo' src={logo} alt="" />
       <Divider/>
        <div className="menuDiv">
-       <p><i className="fad fa-th-large"></i><Link to="">Dashboard</Link></p>
-       <p><i className="fas fa-user"></i><Link to="adminUser">Admin</Link></p>
-       <p><i className="fas fa-user-friends"></i><Link to="creator">Creators</Link></p>
-       <p><i className="fas fa-tags"></i><Link to="collections">Collections</Link></p>
-       <p><i className="fas fa-check-circle"></i><Link to="nfts">NFTs</Link></p>
-       <p><i className="fad fa-circle"></i><Link to="tokens">Tokens</Link></p>
-       <p><i className="fas fa-pen-alt"></i><Link to="editor">Editor</Link></p>
+       <NavLink className="dashboardMenu" style={menuLinkStyles} to="dashboard"> <span className='navIconAdmin'><i class="fas fa-th-large"></i></span> Dashboard</NavLink><br />
+       <NavLink className="dashboardMenu" style={menuLinkStyles} to="adminUser"> <span className='navIconAdmin'><i className="fas fa-user"></i></span>  Admin</NavLink><br />
+       <NavLink className="dashboardMenu" style={menuLinkStyles} to="creator"> <span className='navIconAdmin'><i className="fas fa-user-friends"></i></span> Creators</NavLink><br />
+       <NavLink className="dashboardMenu" style={menuLinkStyles} to="collections"> <span className='navIconAdmin'><i className="fas fa-tags"></i></span> Collections</NavLink><br />
+       <NavLink className="dashboardMenu" style={menuLinkStyles} to="nfts"> <span className='navIconAdmin'><i className="fas fa-check-circle"></i></span> NFTs</NavLink><br />
+       <NavLink className="dashboardMenu" style={menuLinkStyles} to="tokens"> <span className='navIconAdmin'><i className="fas fa-circle"></i></span> Tokens</NavLink><br />
+       <NavLink className="dashboardMenu" style={menuLinkStyles} to="editor"> <span className='navIconAdmin'><i className="fas fa-pen-alt"></i></span> Editor</NavLink><br />
 
        </div>
     </div>
@@ -54,6 +60,10 @@ function AdminDashboard(props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
+  const menuToggle = () =>{
+    const toggleMenu = document.querySelector('.adminProfile');
+    toggleMenu.classList.toggle('active')
+  }
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -76,11 +86,24 @@ function AdminDashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            dashboard
+          <Typography variant="h6" noWrap component="div" className='dashboardTopBar'>
+            <h4>Dashboard</h4>
+            <div className="profile">
+              <div className="imgDashDiv" onClick={menuToggle}>
+                <img src={profileImg} alt="" />
+              </div>
+            </div>
           </Typography>
+        
         </Toolbar>
+        <div className="adminProfile">
+              <Link to="/home">Admin Name</Link><br />
+              <hr />
+              <Link to="admin" className='mb-3 d-flex'><i className="fas fa-user me-2"></i>  Profile</Link>
+              <p className='text-start'><i class="fas fa-sign-out-alt"></i> log Out</p>
+            </div>
       </AppBar>
+   
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
@@ -125,12 +148,14 @@ function AdminDashboard(props) {
          <Routes>
              <Route path='adminUser' element={<Admin/>}/>
              <Route path='' element={<Dashboard/>}/>
+             <Route path='dashboard' element={<Dashboard/>}/>
              <Route path='creator' element={<Creator/>}/>
              <Route path='collections/*' element={<Collections/>}/>
              <Route path='nfts' element={<NFTs/>}/>
              <Route path='tokens' element={<Tokens/>}/>
              <Route path='editor/*' element={<Editor/>}/>
              <Route path='collections/newCollection' element={<AddNewCollection/>}/>
+             <Route path="admin" element={<AdminProfile/>} />
          </Routes>
          </div>
       </Box>

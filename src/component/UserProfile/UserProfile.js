@@ -3,6 +3,8 @@ import { Card, Col, Nav, Row, Tab } from 'react-bootstrap';
 import user from './maleprofile.jpg';
 import './UserProfile.css';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 
 const UserProfile = () => {
@@ -13,6 +15,8 @@ const UserProfile = () => {
         .then(data => setLiked(data))
     },[])
     return (
+        <div>
+        <Header></Header>
         <div className='container'>
             <div className="userImgIfo">
               <div className="imgDiv">
@@ -126,6 +130,8 @@ const UserProfile = () => {
                 </Row>
                 </Tab.Container>
             </div>
+        </div>
+        <Footer></Footer>
         </div>
     );
 };

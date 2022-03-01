@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-   
+    margin-top: -2rem;
     padding-bottom: 1rem;
 }
 .sliderRow{
@@ -119,7 +119,7 @@
 @media only screen and (max-width: 600px) {
     
     .banner{
-        margin-top: 0rem;
+        margin-top: -2rem;
     }
 
     .detail1{

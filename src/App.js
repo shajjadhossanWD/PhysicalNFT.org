@@ -8,10 +8,10 @@ import Art from './component/Explore/Art/Art';
 import Music from './component/Explore/Music/Music';
 import Video from './component/Explore/Video/Video';
 import RealWorld from './component/Explore/RealWorld/RealWorld';
-import TopCreators from './component/TopCreators/TopCreators';
 import Activity from './component/Stats/Activity/Activity';
 import Rankings from './component/Stats/Rankings/Rankings';
 import UserProfile from './component/UserProfile/UserProfile';
+import TopCreator from './component/TopCreators/TopCreator';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route path="/music" element={<Music/>}/>
         <Route path="/video" element={<Video/>}/>
         <Route path="/realWorld" element={<RealWorld/>}/>
-        <Route path="/topCreators" element={<TopCreators/>}/>
+        <Route path="/topCreators" element={<TopCreator/>}/>
         <Route path="/activity" element={<Activity/>}/>
         <Route path="/rankings" element={<Rankings/>}/>
         <Route path="/user/*" element={<UserProfile/>}/>

@@ -1,0 +1,37 @@
+.profileDiv{
+    background-color: #272D47;
+    padding: 50px;
+    border-radius: 10px;
+}
+.creatorsInput{
+    background-color: transparent;
+    border: 0.2px solid #9a9ead54;
+    width: 80%;
+    border-radius: 0 10px 10px 0;
+    color: #ABB6BF;
+}
+.inputProfile{
+    margin-bottom: 1rem;
+}
+.ProfileImg{
+    width: 150px;
+    border-radius: 50%;
+    margin: auto;
+}
+.ImageInput{
+    background-color: transparent;
+    padding: 5px;
+    border: 1px solid #9a9ead54;
+}
+.imgBtn{
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+.profileBtnChange{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #657eda;
+    margin-top: 1rem;
+}

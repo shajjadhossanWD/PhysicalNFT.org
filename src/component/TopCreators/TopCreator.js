@@ -3,8 +3,9 @@ import { MDBDataTable } from 'mdbreact';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
-import Header from '../../Header/Header';
-import Footer from '../../Footer/Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import './TopCreator.css';
 
 const currencies = [
   
@@ -143,7 +144,7 @@ const data =  [
     },
 
   ]
-const Rankings = () => {
+const TopCreator = () => {
 
     useEffect(() => {
         if (data) {
@@ -220,7 +221,7 @@ const Rankings = () => {
       <div >
           <Header></Header>
         <div className='pt-5'>
-                <h1 className='text-white pageTitle'>Rankings</h1>
+                <h1 className='text-white pageTitle'>Top Creators</h1>
           
         <div className="exploreDiv py-5">
         <h4 className='text-white'>All Catagories</h4>
@@ -270,4 +271,4 @@ const Rankings = () => {
   );
 }
 
-export default Rankings;
+export default TopCreator;

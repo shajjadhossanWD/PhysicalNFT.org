@@ -4,6 +4,7 @@ import './Dashboard.css';
 
 const Dashboard = () => {
     return (
+        <div>
         <div className='container'>
             <h4 className='text-white text-start'>Dashboard</h4>
             <Row xs={1} md={3} lg={4} className="g-4">
@@ -92,6 +93,11 @@ const Dashboard = () => {
                 </Card>
                 </Col>
             </Row>
+            <p className='demoP'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem quae nam pariatur laboriosam omnis sequi laborum accusamus vel aperiam ducimus voluptatum at aspernatur a nostrum quibusdam doloribus inventore impedit, facere velit odit deleniti dolorum minima culpa! Accusamus dolorum quasi esse autem mollitia! Iure aliquid reiciendis vitae praesentium ratione! Impedit vero velit doloremque quidem, mollitia ut cupiditate ex non atque quia optio aliquam nobis exercitationem cum. Porro velit facere libero harum, sed recusandae magni commodi dolore minus odit fuga voluptas maxime fugit ipsa explicabo, aut quasi doloribus debitis suscipit, cupiditate alias! Id a ab, minima sint quisquam sunt rem earum non minus autem maiores, aut quos nemo ullam recusandae velit! Pariatur, debitis et! Dignissimos provident, dicta sapiente debitis expedita ex accusamus fugiat aut unde. Quo dolorum rerum laudantium inventore officia saepe, sint sed quibusdam. Pariatur impedit possimus, explicabo sint cum perspiciatis doloremque vitae et fugit libero? Neque delectus impedit rem saepe doloribus eveniet ullam sed, aperiam beatae incidunt eos reprehenderit dolorem ipsam amet eius, culpa labore aliquam expedita magni. Quam, voluptatum voluptates! Numquam, dolorum! Incidunt assumenda asperiores dolores culpa aliquid, accusamus eligendi fuga praesentium impedit aspernatur reprehenderit architecto veritatis ab eaque quae odio molestias minima voluptatum molestiae expedita nemo amet ratione rem! Ad eveniet pariatur commodi cum fuga harum asperiores esse quas voluptatibus facilis. Ducimus eligendi velit quaerat laboriosam. Quo asperiores ea magnam placeat eveniet explicabo ad delectus nemo molestias qui. Sunt, commodi corrupti sequi reprehenderit exercitationem odit voluptatem quaerat cum dolorum assumenda. Corrupti saepe, eius ab tenetur doloremque illum labore odio, quas cumque natus non. Modi facilis libero, animi est perferendis voluptatem ipsam quo iste delectus possimus enim explicabo praesentium eveniet a nisi error dolorem accusantium et ipsum inventore, distinctio sed. Quas distinctio nemo quod tempore est ducimus corrupti unde facilis minus, adipisci numquam sed tempora qui possimus? Quis, sed.</p>
+        </div>
+        <div className="copyrightAdmin my-5">
+      <p>Copyright © 2022 - DS Legends Pte. Ltd.</p>
+    </div>
         </div>
     );
 };
