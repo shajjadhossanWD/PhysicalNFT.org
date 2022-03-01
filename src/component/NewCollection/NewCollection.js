@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import './NewCollection.css';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Link } from 'react-router-dom';
 import maleImg from './maleprofile.jpg';
 
@@ -25,10 +24,12 @@ const NewCollection = () => {
                        <div className="UserImgNew">
                            <Link to="/user">
                             <img className='imgUsersNew' src={maleImg} alt="" />
-                            <span className="check"><i class="fas fa-check-circle"></i></span>
+                            <span className="checkNew"><i class="fas fa-check-circle"></i></span>
                             </Link>
                           </div>
-
+                           <div className="btnCollection">
+                              <button className='buttonCollection'>0h 0m 0s</button>
+                           </div>
                            <img className="imgCollection" src={items.img} alt="" />
                           
                         
@@ -36,10 +37,10 @@ const NewCollection = () => {
                         <Card.Body>
                         <Card.Title className='fs-6'>{items.name}</Card.Title>
                         <Card.Text>
-                            <span>{items.price}</span>
+                            <span className='collectionPrice'>{items.price}</span>
                             <span className='ms-4'>{items.quantity}</span><br />
-                            <span>{items.payStatus}</span>
-                            <span className='ms-4'><FavoriteIcon/> {items.react}</span>
+                            <span className='payStatus'>{items.payStatus}</span>
+                            <span className='ms-4 collectionLike'><i class="fas fa-heart"></i> {items.react}</span>
                         </Card.Text>
                         </Card.Body>
                     </Card>

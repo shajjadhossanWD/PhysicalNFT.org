@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import './Explore.css';
 import Pagination from '@mui/material/Pagination';
 import TextField from '@mui/material/TextField';
@@ -8,6 +7,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom';
+import maleImg from './maleprofile.jpg';
 
 const currencies = [
   
@@ -95,21 +96,31 @@ const Explore = () => {
         </Box>
 
         <div className="container">
-            <Row xs={1} md={3} lg={4} className="g-4">
+            <Row xs={1} md={2} lg={4} className="g-4">
             {
                 collection.map(items=>(
                 <Col>
                     <Card className='newCollectionCard'>
                        <div className="ItemsImg">
+                       <div className="UserImgNew">
+                           <Link to="/user">
+                            <img className='imgUsersNew' src={maleImg} alt="" />
+                            <span className="checkNew"><i class="fas fa-check-circle"></i></span>
+                            </Link>
+                          </div>
+                           <div className="btnCollection">
+                              <button className='buttonCollection'>0h 0m 0s</button>
+                           </div>
                            <img className="imgCollection" src={items.img} alt="" />
                        </div>
                         <Card.Body>
+                    
                         <Card.Title className='fs-6'>{items.name}</Card.Title>
                         <Card.Text>
-                            <span>{items.price}</span>
+                            <span className='collectionPrice'>{items.price}</span>
                             <span className='ms-4'>{items.quantity}</span><br />
-                            <span>{items.payStatus}</span>
-                            <span className='ms-4'><FavoriteIcon/> {items.react}</span>
+                            <span  className='payStatus'>{items.payStatus}</span>
+                            <span className='ms-4 collectionLike'><i class="fas fa-heart"></i> {items.react}</span>
                         </Card.Text>
                         </Card.Body>
                     </Card>
