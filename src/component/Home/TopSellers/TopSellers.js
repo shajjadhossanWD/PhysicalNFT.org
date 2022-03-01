@@ -22,6 +22,7 @@ const TopSellers = () => {
                           <div className="UserImg">
                            <Link to="/user">
                             <img className='imgUsers' src={topUser.img} alt="" />
+                            <span className="check"><i class="fas fa-check-circle"></i></span>
                             </Link>
                           </div>
                           </div>

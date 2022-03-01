@@ -257,10 +257,9 @@ const Rankings = () => {
      
       <div className="container">
      <MDBDataTable
-      
-      
       small
       data={DataTable}
+      className="dataTableTop"
     />
     </div>
     </div>

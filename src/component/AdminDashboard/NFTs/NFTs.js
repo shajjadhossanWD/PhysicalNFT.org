@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { MDBDataTable } from 'mdbreact';
 import './NFTs.css';
-import img from './crs-5.jpg'
 
 const data =  [
     {

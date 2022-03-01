@@ -32,3 +32,9 @@
     color: white;
     text-decoration: none;
 }
+.check{
+    position: absolute;
+    margin-top: -1.3rem;
+    margin-left: 0.5rem;
+    color: #FF343F;
+}

@@ -19,6 +19,25 @@
     transform: scale(1.02);
     transition: all 0.5s ease-in-out;
 }
+
+.imgUsersNew{
+    width: 50px;
+    border-radius: 50%;
+}
+.imgUsersNew:hover{
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+.UserImgNew{
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: #FF343F;
+    overflow: hidden;
+    width: 50px;
+}
+.UserImgNew:hover{
+   border: 1px solid #FF343F;
+}
 /* @media only screen and (max-width: 600px){
 
 } */

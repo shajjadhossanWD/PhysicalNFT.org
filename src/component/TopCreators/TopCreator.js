@@ -258,8 +258,7 @@ const TopCreator = () => {
      
       <div className="container">
      <MDBDataTable
-      
-      
+      className='dataTableTop'
       small
       data={DataTable}
     />

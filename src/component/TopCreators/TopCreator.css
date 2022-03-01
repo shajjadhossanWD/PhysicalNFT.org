@@ -1,3 +1,18 @@
 table.dataTable tbody td {
     width: 0%;
 }
+.dataTables_length{
+    display: none;
+}
+.mdb-datatable-filter{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    .dataTableTop{
+      overflow: scroll;
+    }
+
+  }
+/* 
+  @media screen and (max-width: 640px)
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper  */

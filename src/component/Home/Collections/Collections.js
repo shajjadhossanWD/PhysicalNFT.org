@@ -57,6 +57,8 @@ export default function App() {
                 <div className="userImg1 mx-auto">
                  <Link to="/user">
                   <img src={allCollection.userImg} alt="" />
+                  <span className="checkCollection"><i class="fas fa-check-circle"></i></span>
+
                   </Link>
                 </div>
                <div className="collectionDescription">

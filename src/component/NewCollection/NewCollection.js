@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import './NewCollection.css';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Link } from 'react-router-dom';
+import maleImg from './maleprofile.jpg';
 
 const NewCollection = () => {
     const [collection, setCollection] = useState([])
@@ -19,7 +21,17 @@ const NewCollection = () => {
                 <Col>
                     <Card className='newCollectionCard'>
                        <div className="ItemsImg">
+
+                       <div className="UserImgNew">
+                           <Link to="/user">
+                            <img className='imgUsersNew' src={maleImg} alt="" />
+                            <span className="check"><i class="fas fa-check-circle"></i></span>
+                            </Link>
+                          </div>
+
                            <img className="imgCollection" src={items.img} alt="" />
+                          
+                        
                        </div>
                         <Card.Body>
                         <Card.Title className='fs-6'>{items.name}</Card.Title>

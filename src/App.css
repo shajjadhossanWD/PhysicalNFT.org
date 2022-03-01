@@ -3,8 +3,9 @@
   background-color: #212428;
 }
 .tableImg{
-  width: 45px;
+  width: 48px;
   border-radius: 50%;
+  margin-left: 2rem;
 }
 
 
@@ -24,5 +25,8 @@ tbody, td, tfoot, th, thead, tr{
 @media only screen and (max-width: 600px){
   .table{
     overflow: scroll;
+  }
+  .tableImg{
+    margin-left: 0rem;
   }
 }

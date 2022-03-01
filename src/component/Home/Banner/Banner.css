@@ -8,7 +8,7 @@
     padding-bottom: 1rem;
 }
 .sliderRow{
-    margin-top: 2rem;
+    margin-top: 6rem;
 }
 .hidden{
     visibility: hidden;
@@ -114,7 +114,12 @@
     pointer-events: auto;
     margin-top: 1.5rem;
 }
-
+.checkBanner{
+    position: absolute;
+    margin-top: -1.3rem;
+    margin-left: 2rem;
+    color: #FF343F;
+}
 
 @media only screen and (max-width: 600px) {
     

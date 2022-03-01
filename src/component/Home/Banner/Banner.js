@@ -46,6 +46,7 @@ const Banner = () => {
                   <div className="img">
                   <Link to="/user">
                    <img src={user} alt="user" className="userImg"/>
+                   <span className="checkBanner"><i class="fas fa-check-circle"></i></span>
 
                   </Link>
                   </div>
@@ -94,6 +95,8 @@ const Banner = () => {
                 <div className="userProfile">
                   <div className="img">
                    <img src={user} alt="user" className="userImg"/>
+                   <span className="checkBanner"><i class="fas fa-check-circle"></i></span>
+
                   </div>
                   <div className="detailUser">
                    <Link to="/user" className="userLink" >
@@ -127,6 +130,7 @@ const Banner = () => {
           <div className="row sliderRow">
               <div className="col-lg-6">
               <img width="100%" src={crs2} alt="slider3" />
+
               </div>
 
 
@@ -135,6 +139,8 @@ const Banner = () => {
                 <div className="userProfile">
                   <div className="img">
                    <img src={user} alt="user" className="userImg"/>
+                   <span className="checkBanner"><i class="fas fa-check-circle"></i></span>
+
                   </div>
                   <div className="detailUser">
                   <Link to="/user" className="userLink" >
