@@ -1,6 +1,6 @@
 .editorList{
     background-color: transparent;
-    width: 80%;
+    width: 85%;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -13,30 +13,73 @@
     text-decoration: none;
     font-size: 0.9rem;
     text-align: start;
-    padding: 7px;
     color: rgb(186, 191, 216);
     display: inline-block;
     border-bottom: 1px solid #595195d5;
-    border-radius: 20px;
 }
 .editorList button{
-   width: 250px;
+   width: 245px;
+   padding: 15px;
 }
 .editorDiv{
     background-color: #272D47;
     padding: 20px;
-    border-radius: 10px;
 }
 .editorBtn{
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
     background-color: #657eda;
     display: flex;
     margin-top: 1rem;
     margin-left: -0.2rem;
     color: white;
+    padding: 15px;
+    border-radius: 10px;
 }
 .editorDiv a.active{
     background-color: #484082;
+}
+
+
+
+@media only screen and (max-width: 1034px) {
+
+.editorList{
+    width: 80%;
+    margin: 0 auto;
+}
+.editorList button{
+    width: 150px;
+    padding: 5px;
+ }
+}
+@media only screen and (max-width: 854px) {
+
+.editorList{
+    width: 65%;
+    margin: 0 auto;
+}
+}
+@media only screen and (max-width: 600px) {
+
+    .editorList{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 500px) {
+
+    .editorList{
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 300px) {
+
+    .editorList{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .editorList button{
+        width: 170px;
+        padding: 5px;
+     }
 }

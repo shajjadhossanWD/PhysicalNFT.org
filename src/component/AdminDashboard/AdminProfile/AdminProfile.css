@@ -35,3 +35,16 @@
     background-color: #657eda;
     margin-top: 1rem;
 }
+
+@media only screen and (max-width: 624px) {
+   .countryInput{
+       width: 100%;
+   }
+   .creatorsInput{
+    background-color: transparent;
+    border: 0.2px solid #9a9ead54;
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+    color: #ABB6BF;
+}
+}

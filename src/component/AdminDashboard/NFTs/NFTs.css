@@ -38,7 +38,7 @@ div.mdb-datatable div.mdb-datatable-info {
     justify-content: center;
     color: white;
 }
-.NFTsTable{
+.NFTsTables{
     background-color: #272D47;
     border-radius: 10px;
     padding: 20px;
@@ -55,7 +55,7 @@ div.mdb-datatable div.mdb-datatable-length select{
     display: flex;
     margin-top: 1rem;
     margin-left: -0.2rem;
-    width: 10%;
+    width: 12%;
     color: white;
 }
 table.dataTable tbody tr {
@@ -76,8 +76,9 @@ table.dataTable tbody td {
 .dataTables_info{
     color: white !important;
 }
-@media only screen and (max-width: 600px) {
-    .NFTsTable{
+
+@media only screen and (max-width: 1094px) {
+    .NFTsTables{
         overflow: scroll;
     }
     .adminBtnNFT{
@@ -88,13 +89,13 @@ table.dataTable tbody td {
         display: flex;
         margin-top: 1rem;
         margin-left: -0.2rem;
-        width: 22%;
+        width: 15%;
         color: white;
     }
     
     }
 @media only screen and (max-width: 964px) {
-    .NFTsTable{
+    .NFTsTables{
         overflow: scroll;
     }
     .adminBtnNFT{
@@ -105,8 +106,62 @@ table.dataTable tbody td {
         display: flex;
         margin-top: 1rem;
         margin-left: -0.2rem;
-        width: 22%;
+        width: 23%;
         color: white;
     }
     
     }
+
+@media only screen and (max-width: 600px) {
+    .NFTsTables{
+        overflow: scroll;
+    }
+    .adminBtnNFT{
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #657eda;
+        display: flex;
+        margin-top: 1rem;
+        margin-left: -0.2rem;
+        width: 25%;
+        color: white;
+    }
+    
+    }
+@media only screen and (max-width: 460px) {
+    .NFTsTables{
+        overflow: scroll;
+    }
+    .adminBtnNFT{
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #657eda;
+        display: flex;
+        margin-top: 1rem;
+        margin-left: -0.2rem;
+        width: 40%;
+        color: white;
+        text-align: center;
+    }
+    
+    }
+@media only screen and (max-width: 300px) {
+    .NFTsTables{
+        overflow: scroll;
+    }
+    .adminBtnNFT{
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #657eda;
+        display: flex;
+        margin-top: 1rem;
+        margin-left: -0.2rem;
+        width: 52%;
+        color: white;
+    }
+    
+    }
+

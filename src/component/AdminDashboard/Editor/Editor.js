@@ -63,7 +63,7 @@ const navLinkStyles =({isActive})=>{
                         
                     </div>
                    </div>
-                   <div className="col-lg-8">
+                   <div className="col-lg-8 mt-5">
                    <Routes>
                         <Route path='' element={<HelpCenter/>}/>
                         <Route path='newsletter' element={<Newsletter/>}/>

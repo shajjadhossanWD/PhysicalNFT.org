@@ -15,7 +15,7 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
-    margin-left: 2rem;
+    margin-left: 0.6rem;
     margin-top: 2rem;
 }
 .adminDataTable{
@@ -65,6 +65,25 @@
 @media only screen and (max-width: 994px) {
     .adminDataTable{
         overflow: scroll;
+    }
+}
+@media only screen and (max-width: 994px) {
+    .adminDataTable{
+        overflow: scroll;
+    }
+    .AccessBtn{
+        border: none;
+        background-color: #42C48A;
+        padding: 5px 5px;
+        border-radius: 5px;
+        margin-left: -1rem;
+    }
+    .deleteBtn{
+        border-radius: 5px;
+        background-color: #EF5858;
+        padding: 5px 5px;
+        border: none;
+        border-top: 2px;
     }
 }
 

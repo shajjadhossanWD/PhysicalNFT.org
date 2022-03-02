@@ -151,16 +151,17 @@ const NFTs = () => {
   
 
   return (
+    <div>
+    <h5 className='text-start text-white'>NFTs</h5>
       <div className="NFTsTables">
       <div className="adminBtnNFT">
        New NFT
       </div>
      <MDBDataTable
-      
-      className='NFTsTable'
       small
       data={DataTable}
     />
+    </div>
     </div>
   );
 }
