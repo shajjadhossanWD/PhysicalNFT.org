@@ -69,6 +69,12 @@ a:hover{
     background: transparent;
     border: 1px solid #FF343F;
 }
+.styles_scroll-to-top__2A70v{
+    background-color: #FF343F !important;
+}
+svg{
+    margin: 0 auto;
+}
 
 @media only screen and (max-width: 974px){
     .iconDivSocial span{

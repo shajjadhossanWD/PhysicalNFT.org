@@ -48,6 +48,10 @@
     margin-left: 1rem;
 
 }
+.navItem1:hover{
+    border-bottom: 2px solid #FF343F;
+    transition: all 0.5s ease-in-out;
+}
 
 .navbarBtn{
     background-color: #FF343F;

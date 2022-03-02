@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import './Footer.css';
+import ScrollToTop from "react-scroll-to-top";
 
 const Footer = () => {
     const [link, setLink] = useState({});
@@ -11,6 +12,7 @@ const Footer = () => {
     },[])
     return (
         <div className="footerDiv">
+      <ScrollToTop smooth top="100" width='25px' color='white'/>
 
         
         <div className='container'>

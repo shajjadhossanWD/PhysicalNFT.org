@@ -29,10 +29,9 @@ const Creator = () => {
     <h5 className='text-white text-start'>Creators</h5>
     <div className='adminCard py-2'>
         <button onClick={handleClickOpen} className='adminBtn'>New Creator</button>
-            <Table className='text-white adminDataTable'>
-            
-
-            <thead>
+        <div className="tableNormal">
+         <Table className='text-white adminDataTable'>
+           <thead>
               <tr>
                 <th>Image</th>
                 <th>Username</th>
@@ -65,8 +64,21 @@ const Creator = () => {
                 </td>
               </tr>
               
+              <tr>
+                <td><img className='imgAdmin' src={img1} alt="" /></td>
+                <td>Shajjad Hossan</td>
+                <td>Shajjadhossan@gamil.com</td>
+                <td>01787676726</td>
+                <td>
+               <button className='AccessBtn'> <i class="fas fa-pen-alt"></i></button>
+                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
+                </td>
+              </tr>
+              
             </tbody>
       </Table>
+      </div>
+
            <CreatorsPopUp
                open={open}
                handleClose={handleClose}

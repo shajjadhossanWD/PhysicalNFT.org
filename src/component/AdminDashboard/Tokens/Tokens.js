@@ -14,7 +14,7 @@ const Tokens = () => {
     <div>
     <h5 className='text-start text-white mb-4'>Tokens</h5>
     <div className='tokenTable'>
-      <Table className='text-white hover adminDataTable'>
+      <Table className='text-white hover tokenTable'>
          <thead>
               <tr>
                 <th>ICON</th>

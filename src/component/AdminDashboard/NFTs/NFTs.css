@@ -9,7 +9,7 @@
     --bs-table-active-color: ;
     --bs-table-hover-color: rgb(153, 115, 115);
     --bs-table-hover-color: ;
-    s-table-hover-color: #212529;
+    --s-table-hover-color: #212529;
     --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
     width: 100%;
     margin-bottom: 1rem;
@@ -76,8 +76,7 @@ table.dataTable tbody td {
 .dataTables_info{
     color: white !important;
 }
-
-@media only screen and (max-width: 964px) {
+@media only screen and (max-width: 600px) {
     .NFTsTable{
         overflow: scroll;
     }
@@ -94,7 +93,7 @@ table.dataTable tbody td {
     }
     
     }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 964px) {
     .NFTsTable{
         overflow: scroll;
     }

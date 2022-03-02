@@ -23,3 +23,8 @@
    text-align: start;
    padding-top: 0.5rem;
 }
+.createSellIcon{
+    position:absolute;
+    color: #FF343F;
+    font-size: 2rem;
+}

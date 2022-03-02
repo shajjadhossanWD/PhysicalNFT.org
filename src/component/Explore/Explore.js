@@ -2,42 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import './Explore.css';
 import Pagination from '@mui/material/Pagination';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import Box from '@mui/material/Box';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
 import maleImg from './maleprofile.jpg';
 
-const currencies = [
-  
-    {
-      value: 'EUR',
-      label: 'All Items',
-    },
-    {
-      value: 'BTC',
-      label: 'Art',
-    },
-    {
-      value: 'JPY',
-      label: 'Music',
-    },
-    {
-        value: 'USD',
-        label: 'Video',
-    },
-    {
-        value: 'UE',
-        label: 'Real World',
-    },
-  ];
 
 const Explore = () => {
     const [collection, setCollection] = useState([])
     const [page, setPage] = useState(1);
-    const [currency, setCurrency] = React.useState('EUR');
 
     useEffect(()=>{
         fetch(`./newItems.json?_page=${page}`)
@@ -45,9 +18,7 @@ const Explore = () => {
         .then(data => setCollection(data))
     },[page])
 
-    const handleChange = (event) => {
-        setCurrency(event.target.value);
-      };
+    
 
 
 
@@ -63,37 +34,12 @@ const Explore = () => {
         <div className="exploreDiv py-5">
          
             <h4 className='text-white'>All Catagories</h4>
-         
-        <Box
-            component="form"
-            sx={{
-                '& .MuiTextField-root': { m: 1, width: '25ch' },
-            }}
-            noValidate
-            autoComplete="off"
-            >
-        <div className="inputDivExpo">
-            <TextField
-            id="outlined-select-currency"
-            select
-            label="Select"
-            value={currency}
-            onChange={handleChange}
-            // color="secondary" 
-            focused
-            className='pb-5 textField'
-            style={{
-                color: '#FF343F'
-            }}
-            >
-            {currencies.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  <span className='text-white'>{option.label}</span> 
-                </MenuItem>
-            ))}
-            </TextField>
-            </div>
-        </Box>
+            <select name="cars" id="cars" className='selectInput'>
+              <option value="All Catagories">All Catagories</option>
+              <option value="Top sellers for the month">Top sellers for the month</option>
+              <option value="New sellers for the month">New sellers for the month</option>
+            </select>
+       
 
         <div className="container">
             <Row xs={1} md={2} lg={4} className="g-4">

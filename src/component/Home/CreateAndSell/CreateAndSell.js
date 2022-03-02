@@ -17,7 +17,9 @@ const CreateAndSell = () => {
                     <AccountBalanceWalletIcon className='sellIcon'/>
                     </Card.Title>
                     <Card.Text>
-                        <h5>Register with us</h5>
+                        <h5>Connect Your Wallet</h5>
+                        <i class="far fa-wallet createSellIcon"></i>
+
                     </Card.Text>
                     </Card.Body>
                 </Card>

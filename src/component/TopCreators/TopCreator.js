@@ -1,28 +1,10 @@
 import React, { useEffect } from 'react';
 import { MDBDataTable } from 'mdbreact';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import './TopCreator.css';
 
-const currencies = [
-  
-    {
-      value: 'EUR',
-      label: 'All Categories',
-    },
-    {
-      value: 'BTC',
-      label: 'Top sellers for the month',
-    },
-    {
-      value: 'JPY',
-      label: 'New sellers for the month',
-    },
 
-  ];
 
 const data =  [
     {
@@ -213,48 +195,21 @@ const TopCreator = () => {
 
 
   
-  const [currency, setCurrency] = React.useState('EUR');
-  const handleChange = (event) => {
-      setCurrency(event.target.value);
-    };
+ 
   return (
       <div >
           <Header></Header>
         <div className='pt-5'>
-                <h1 className='text-white pageTitle'>Top Creators</h1>
+        <h1 className='text-white pageTitle'>Top Creators</h1>
           
         <div className="exploreDiv py-5">
         <h4 className='text-white'>All Catagories</h4>
-        <Box
-            component="form"
-            sx={{
-                '& .MuiTextField-root': { m: 1, width: '25ch' },
-            }}
-            noValidate
-            autoComplete="off"
-            >
-        <div className="inputDivExpo">
-            <TextField
-            id="outlined-select-currency"
-            select
-            label="Select"
-            value={currency}
-            onChange={handleChange}
-            // color="secondary" 
-            focused
-            className='pb-5 textField'
-            style={{
-                color: '#FF343F'
-            }}
-            >
-            {currencies.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  <span className='text-white'>{option.label}</span> 
-                </MenuItem>
-            ))}
-            </TextField>
-            </div>
-        </Box>
+            <select name="cars" id="cars" className='selectInput'>
+              <option value="All Catagories">All Catagories</option>
+              <option value="Top sellers for the month">Top sellers for the month</option>
+              <option value="New sellers for the month">New sellers for the month</option>
+            </select>
+       
      
       <div className="container">
      <MDBDataTable

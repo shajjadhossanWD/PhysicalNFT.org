@@ -88,20 +88,20 @@ function AdminDashboard(props) {
           </IconButton>
           <Typography variant="h6" noWrap component="div" className='dashboardTopBar'>
             <h4>Dashboard</h4>
-            <div className="profile">
+             <div className="profile">
               <div className="imgDashDiv" onClick={menuToggle}>
                 <img src={profileImg} alt="" />
               </div>
-            </div>
+            </div> 
           </Typography>
         
         </Toolbar>
-        <div className="adminProfile">
+         <div className="adminProfile">
               <Link to="/home">Admin Name</Link><br />
               <hr />
               <Link to="admin" className='mb-3 d-flex'><i className="fas fa-user me-2"></i>  Profile</Link>
               <p className='text-start'><i class="fas fa-sign-out-alt"></i> log Out</p>
-            </div>
+            </div> 
       </AppBar>
    
       <Box

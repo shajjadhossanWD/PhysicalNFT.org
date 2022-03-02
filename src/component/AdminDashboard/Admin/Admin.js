@@ -31,6 +31,8 @@ const Admin = () => {
     <h5 className='text-white text-start'>Admin</h5>
     <div className='adminCard py-2'>
         <button onClick={handleClickOpen} className='adminBtn'>New Admin</button>
+        <div className="tableNormal">
+
             <Table className='text-white adminDataTable'>
             
 
@@ -80,6 +82,7 @@ const Admin = () => {
               
             </tbody>
       </Table>
+      </div>
            <AdminPopUp
                open={open}
                handleClose={handleClose}
