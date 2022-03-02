@@ -7,7 +7,7 @@ const Dashboard = () => {
         <div>
         <div className='container'>
             <h4 className='text-white text-start'>Dashboard</h4>
-            <Row xs={1} md={3} lg={4} className="g-4">
+            <Row xs={1} md={2} lg={3} xl={4} className="g-4">
                 <Col>
                 <Card className='cardDash'>
                     <Card.Body className="d-flex align-items-center justify-content-between">

@@ -18,16 +18,17 @@ const Collections = () => {
     };
 
     return (
-        <div>
+        <div className='collectionClass'>
             <div className='adminBody'>
     <h5 className='text-white text-start'>Creators</h5>
     <div className='adminCard py-2'>
     <Link to='newCollection' className='collectionLink'>
         <button className='adminBtn'>New Collection</button>
         </Link>
-            <Table className='text-white adminDataTable'>
-            
+        <div className="tableNormal">
 
+       
+            <Table className='text-white adminDataTable'>
             <thead>
               <tr>
                 <th>Image</th>
@@ -74,7 +75,7 @@ const Collections = () => {
               
             </tbody>
       </Table>
-
+      </div>
             <DeletePopUp
               handleCloseDelete={handleCloseDelete}
               openDelete={openDelete}

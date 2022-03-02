@@ -151,13 +151,13 @@ const NFTs = () => {
   
 
   return (
-      <div className="NFTsTable">
+      <div className="NFTsTables">
       <div className="adminBtnNFT">
        New NFT
       </div>
      <MDBDataTable
       
-      
+      className='NFTsTable'
       small
       data={DataTable}
     />

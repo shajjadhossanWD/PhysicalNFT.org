@@ -97,10 +97,124 @@
  text-decoration: none;
  display: inline-block;
 }
+
+@media only screen and (max-width: 1294px) {
+.imgDashDiv img {
+    width: 42px;
+    border-radius: 50%;
+    margin-left: 49rem;
+}
+.adminProfile{
+    background-color: #272d47;
+    width: 30%;
+    position: absolute;
+    margin-left: 50rem;
+}
+
+}
+@media only screen and (max-width: 1054px) {
+.imgDashDiv img {
+    width: 42px;
+    border-radius: 50%;
+    margin-left: 34rem;
+}
+.adminProfile{
+    background-color: #272d47;
+    width: 40%;
+    position: absolute;
+    margin-left: 35rem;
+}
+
+}
+@media only screen and (max-width: 964px) {
+.imgDashDiv img {
+    width: 42px;
+    border-radius: 50%;
+    margin-left: 29rem;
+}
+.adminProfile{
+    background-color: #272d47;
+    width: 40%;
+    position: absolute;
+    margin-left: 32rem;
+}
+
+}
+@media only screen and (max-width: 854px) {
+.imgDashDiv img {
+    width: 42px;
+    border-radius: 50%;
+    margin-left: 23rem;
+}
+.adminProfile{
+    background-color: #272d47;
+    width: 40%;
+    position: absolute;
+    margin-left: 29rem;
+}
+
+}
+@media only screen and (max-width: 774px) {
+.imgDashDiv img {
+    width: 42px;
+    border-radius: 50%;
+    margin-left: 20rem;
+}
+.adminProfile{
+    background-color: #272d47;
+    width: 40%;
+    position: absolute;
+    margin-left: 26rem;
+}
+
+}
 @media only screen and (max-width: 600px) {
+.imgDashDiv img {
+    width: 42px;
+    border-radius: 50%;
+    margin-left: 18rem;
+}
+
+}
+@media only screen and (max-width: 450px) {
+.imgDashDiv img {
+    width: 42px;
+    border-radius: 50%;
+    margin-left: 9rem;
+}
+.adminProfile{
+    background-color: #272d47;
+    width: 70%;
+    position: absolute;
+    margin-left: 15rem;
+}
+
+}
+@media only screen and (max-width: 360px) {
 .imgDashDiv img {
     width: 42px;
     border-radius: 50%;
     margin-left: 8rem;
 }
+.adminProfile{
+    background-color: #272d47;
+    width: 70%;
+    position: absolute;
+    margin-left: 15rem;
+}
+
+}
+@media only screen and (max-width: 290px) {
+.imgDashDiv img {
+    width: 42px;
+    border-radius: 50%;
+    margin-left: 3rem;
+}
+.adminProfile{
+    background-color: #272d47;
+    width: 70%;
+    position: absolute;
+    margin-left: 13rem;
+}
+
 }

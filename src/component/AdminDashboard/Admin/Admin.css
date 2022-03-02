@@ -20,7 +20,7 @@
 }
 .adminDataTable{
       border: none;
-      
+      overflow: scroll;
 }
 .tableRow{
     padding: 2rem;
@@ -61,5 +61,10 @@
     align-items: center;
     justify-content: center;
     color: white;
+}
+@media only screen and (max-width: 994px) {
+    .adminDataTable{
+        overflow: scroll;
+    }
 }
 

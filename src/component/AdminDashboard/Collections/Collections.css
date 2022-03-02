@@ -134,3 +134,13 @@
 .profileImgDiv i{
     font-size: 3.5rem;
 }
+@media only screen and (max-width: 964px) {
+   .tableNormal{
+       overflow: scroll;
+   }
+   .collectionClass{
+       width: 100%;
+       height: 100vh;
+   }
+    
+    }

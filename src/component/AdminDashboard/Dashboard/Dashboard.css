@@ -16,3 +16,11 @@ svg{
 .demoP{
     visibility: hidden;
 }
+@media only screen and (max-width: 994px) {
+    .dashboardDiv{
+        background-color: #1A1C33;
+        height: auto;
+        background-size: cover;
+    }
+ 
+}

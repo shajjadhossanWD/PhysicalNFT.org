@@ -76,3 +76,38 @@ table.dataTable tbody td {
 .dataTables_info{
     color: white !important;
 }
+
+@media only screen and (max-width: 964px) {
+    .NFTsTable{
+        overflow: scroll;
+    }
+    .adminBtnNFT{
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #657eda;
+        display: flex;
+        margin-top: 1rem;
+        margin-left: -0.2rem;
+        width: 22%;
+        color: white;
+    }
+    
+    }
+@media only screen and (max-width: 600px) {
+    .NFTsTable{
+        overflow: scroll;
+    }
+    .adminBtnNFT{
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #657eda;
+        display: flex;
+        margin-top: 1rem;
+        margin-left: -0.2rem;
+        width: 22%;
+        color: white;
+    }
+    
+    }
