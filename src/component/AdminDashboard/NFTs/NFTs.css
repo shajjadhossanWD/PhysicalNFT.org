@@ -47,7 +47,8 @@ div.mdb-datatable div.mdb-datatable-length select{
     background-color: transparent;
     color: white;
 }
-.adminBtnNFT{
+
+.ButtonNft{
     border: none;
     padding: 10px 15px;
     border-radius: 8px;
@@ -55,7 +56,6 @@ div.mdb-datatable div.mdb-datatable-length select{
     display: flex;
     margin-top: 1rem;
     margin-left: -0.2rem;
-    width: 12%;
     color: white;
 }
 table.dataTable tbody tr {

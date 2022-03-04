@@ -94,16 +94,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
-  
-    margin-top: 7rem;
-    color: white;
-    background-color: #212428;
-    padding: 1rem;
-    border-radius: 50%;
-    border: 0.8px solid rgb(107, 98, 98);
-    
-}
+
 
 .swiper-button-prev:after,.swiper-button-next:after {
     content: 'prev';

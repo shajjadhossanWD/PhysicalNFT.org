@@ -28,7 +28,7 @@ const Banner = () => {
             <Swiper
         effect={"flip"}
         grabCursor={true}
-        pagination={true}
+        pagination={false}
         speed={1300}
         navigation={true}
         modules={[EffectFlip, Pagination, Navigation]}

@@ -1,0 +1,96 @@
+
+.modalNFTBox{
+    width: 60%;
+    height: 100%;
+    padding: 2rem;
+}
+.dolar, .tokenInput, .dateCal{
+    display: flex;
+}
+.NFTImgText{
+    margin-bottom: 0rem;
+    margin-top: 2rem;
+    color: white;
+}
+.NFTBtn{
+    background-color: white;
+    padding: 5px;
+    width: 130px;
+}
+.NFTInput{
+    background-color: transparent;
+    padding: 5px;
+    border: 1px solid white;
+    width: 100%;
+}
+.chosenImg{
+    display: flex;
+}
+.NFTInputDive{
+    margin-top: -1rem;
+}
+.dolar p{
+    background-color: #232741;
+    padding: 8px;
+    color: white;
+}
+.dolarInput{
+    padding: 5px;
+    height: 39px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 100%;
+}
+.dollarDiv{
+    margin-top: 1rem;
+}
+.selectInputNFT{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 9px;
+    color: white;
+}
+.dateCal p{
+    background-color: #232741;
+    padding: 8px;
+    color: white;
+}
+.dateNFT{
+    padding: 5px;
+    height: 39px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 100%;
+}
+.tokenInput p{
+    background-color: #232741;
+    padding: 8px;
+    color: white; 
+}
+.tokenInput{
+    margin-top: 1rem;
+}
+.selectInputNFTToken{
+    padding: 5px;
+    height: 39px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 100%;
+}
+.NFTlabel{
+    color: white;
+    margin-left: 0.5rem;
+}
+.NFTSubmitBtn{
+    background-color: #6d7ccc;
+    padding: 8px 15px;
+    text-align: center;
+    margin-top: 1rem;
+}
+.NFTPopupTitle{
+    color: white;
+}

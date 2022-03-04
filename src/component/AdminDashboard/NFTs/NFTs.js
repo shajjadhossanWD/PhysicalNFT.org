@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { MDBDataTable } from 'mdbreact';
 import './NFTs.css';
+import NFTPopUp from './NFTPopUp/NFTPopUp';
 
 const data =  [
     {
@@ -147,21 +148,27 @@ const NFTs = () => {
     rows: data
   };
 
-
+  const [openNFT, setOpenNFT] = React.useState(false);
+  const handleOpenNFT = () => setOpenNFT(true);
+  const handleCloseNFT = () => setOpenNFT(false);
   
 
   return (
     <div>
     <h5 className='text-start text-white'>NFTs</h5>
       <div className="NFTsTables">
-      <div className="adminBtnNFT">
-       New NFT
+      <div className="adminBtnNFT" >
+      <button className='ButtonNft' onClick={handleOpenNFT}>New NFT</button>
       </div>
      <MDBDataTable
       small
       data={DataTable}
     />
     </div>
+    <NFTPopUp
+      openNFT={openNFT}
+      handleCloseNFT={handleCloseNFT}
+    />
     </div>
   );
 }

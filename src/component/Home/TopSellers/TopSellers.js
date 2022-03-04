@@ -18,7 +18,7 @@ const TopSellers = () => {
             
                 <div className=" col-md-4 col-lg-3  userContainer">
                           <div className="divno d-flex">
-                          <span className='me-2 mt-2'>{topUser.id}.</span>
+                          <span className='me-2 mt-2 top_sellerId'>{topUser.id}.</span>
                           <div className="UserImg">
                            <Link to="/user">
                             <img className='imgUsers' src={topUser.img} alt="" />

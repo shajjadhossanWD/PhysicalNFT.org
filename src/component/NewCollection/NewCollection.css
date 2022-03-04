@@ -86,11 +86,48 @@
     .buttonCollection{
         margin-left: 11rem;
      }
+     .collectionLike{
+        padding-left: 10rem;
+    }
 
 }
  @media only screen and (max-width: 600px){
     .buttonCollection{
+        margin-left: 23rem;
+     }
+     .collectionLike{
+       
+        padding-left: 20rem;
+    }
+
+}
+ @media only screen and (max-width: 450px){
+    .buttonCollection{
+        margin-left: 15rem;
+     }
+     .collectionLike{
+       
+        padding-left: 13rem;
+    }
+
+}
+ @media only screen and (max-width: 400px){
+    .buttonCollection{
         margin-left: 13rem;
      }
+     .collectionLike{
+       
+        padding-left: 10rem;
+    }
+
+}
+ @media only screen and (max-width: 300px){
+    .buttonCollection{
+        margin-left: 7rem;
+     }
+     .collectionLike{
+       
+        padding-left: 9rem;
+    }
 
 }

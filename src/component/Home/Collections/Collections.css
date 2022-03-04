@@ -33,8 +33,43 @@
     color: #FF343F;
 }
 
+.swiper-button-next:after{
+    margin-top: -1rem;
+    margin-left: -1rem;
+    color: white;
+    background-color: #212428;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 0.8px solid rgb(107, 98, 98);
+    
+}
+.swiper-button-prev:after {
+    margin-top: -1rem;
+    margin-left: 1rem;
+    color: white;
+    background-color: #212428;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 0.8px solid rgb(107, 98, 98);
+}
+
 @media only screen and (max-width: 600px){
     .userImg1 img{
         width: 110px;
+    }
+    .checkCollection{
+        margin-top: -1.9rem;
+        margin-left: 1rem;
+        
+    }
+    .checkCollection i{
+        font-size: 1.3rem;
+    }
+    .userImg1 img{
+        width: 100px;
+    }
+    .userImg1{
+        width: 20%;
+       
     }
 }

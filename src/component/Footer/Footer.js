@@ -17,7 +17,7 @@ const Footer = () => {
         
         <div className='container'>
             <div className="row footer">
-                <div className="col-lg-3 col-md-3">
+                <div className="col-lg-3 col-md-3 mt-5">
                 <h5>Marketplace</h5>
                     <p className='menuFooter'><a href='#home'>All NFTs</a></p>
                     <p className='menuFooter'><a href='#home'>Art</a></p>
@@ -26,17 +26,17 @@ const Footer = () => {
                     <p className='menuFooter'><a href='#home'>Videos</a></p>
                     <p className='menuFooter'><a href='#home'>Real World</a></p>
                 </div>
-                <div className="col-lg-3 col-md-3">
+                <div className="col-lg-3 col-md-3 mt-5">
                   <h5>Resources</h5>
                   <p className='menuFooter'><a href='#home'>Help Center</a></p>
                   <p className='menuFooter'><a href='#home'>Newsletter</a></p>
                 </div>
-                <div className="col-lg-3 col-md-3">
+                <div className="col-lg-3 col-md-3 mt-5">
                   <h5>Community</h5>
                   <p className='menuFooter'><a href='#home'>Community</a></p>
                   <p className='menuFooter'><a href='#home'>Documentation</a></p>
                 </div>
-                <div className="col-lg-3 col-md-3">
+                <div className="col-lg-3 col-md-3 mt-5">
                   <h5>Newsletter</h5>
                   <p>Signup for our newsletter to get the latest news in your inbox.</p>
                   <InputGroup className="mb-3 footerInput">

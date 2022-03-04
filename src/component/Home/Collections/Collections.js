@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import './Collections.css';
 
 // import required modules
-import {FreeMode, Pagination } from "swiper";
+import {FreeMode, Pagination, Navigation } from "swiper";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -28,6 +28,7 @@ export default function App() {
         pagination={{
           clickable: true,
         }}
+        navigation={true}
         loop={true}
         breakpoints={{
             640:{
@@ -43,7 +44,7 @@ export default function App() {
               spaceBetween: 20,
             },
         }}
-        modules={[FreeMode, Pagination]}
+        modules={[FreeMode, Pagination, Navigation]}
         className="mySwiper"
       >
       {
