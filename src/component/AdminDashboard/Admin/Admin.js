@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Table } from 'react-bootstrap';
-import img1 from "./maleprofile.jpg";
-import img2 from "./author-4.jpg"
 import './Admin.css';
 import AdminPopUp from './AdminPopUp/AdminPopUp';
 import DeletePopUp from './DeletePopUp/DeletePopUp';
 
 const Admin = () => {
   const [open, setOpen] = React.useState(false);
+  const [admin, setAdmin] = React.useState([]);
+  const [deleteOrders, setDeleteOrders]= React.useState()
+
+  useEffect(()=>{
+    fetch('http://localhost:5007/admin')
+    .then(res => res.json())
+    .then(data => setAdmin(data))
+  },[deleteOrders])
+
+
+  const handleOrderDelete = (id) =>{
+    const confirmDelete = window.confirm('Are you sure, you want to delete this Orders? Please Check it again')
+    if(confirmDelete){
+       fetch(`http://localhost:5007/admin/${id}`, {
+           method: 'DELETE',
+           headers:{"content-type": "application/json"}
+       })
+       .then(res => res.json())
+       .then(result =>{
+        if(result.deletedCount > 0){
+            alert('deleted successfully')
+            setDeleteOrders(result)
+        } 
+    })
+
+    }
+   }
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -18,9 +43,9 @@ const Admin = () => {
 
   const [openDelete, setOpenDelete] = React.useState(false);
 
-  const handleClickOpenDelete = () => {
-    setOpenDelete(true);
-  };
+  // const handleClickOpenDelete = () => {
+  //   setOpenDelete(true);
+  // };
 
   const handleCloseDelete = () => {
     setOpenDelete(false);
@@ -46,39 +71,21 @@ const Admin = () => {
               </tr>
             </thead>
             <tbody>
-           
+           {
+           admin.map(admins =>(
               <tr className='tableRow'>
-                <td> <img className='imgAdmin' src={img1} alt="" /></td>
-                <td>Sam</td>
-                <td>samDslegend@gmail.com</td>
-                <td>01787676726</td>
+                <td> <img className='imgAdmin' src={admins.image} alt="" /></td>
+                <td>{admins.userName}</td>
+                <td>{admins.email}</td>
+                <td>{admins.phone}</td>
                 <td>
-               <button className='AccessBtn'> <i class="fas fa-user-check"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
+              <button className='AccessBtn'> <i className="fas fa-user-check"></i></button>
+                <button onClick={()=>handleOrderDelete(admins._id)} className="deleteBtn"><i className="fas fa-trash"></i></button>
                 </td>
               </tr>
-
-              <tr>
-                <td> <img className='imgAdmin' src={img2} alt="" /></td>
-                <td>Mark</td>
-                <td>Otto@gmail.com</td>
-                <td>01787676726</td>
-                <td>
-               <button className='AccessBtn'> <i class="fas fa-user-check"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
-                </td>
-              </tr>
-
-              <tr>
-                <td><img className='imgAdmin' src={img1} alt="" /></td>
-                <td>Shajjad Hossan</td>
-                <td>Shajjadhossan@gamil.com</td>
-                <td>01787676726</td>
-                <td>
-               <button className='AccessBtn'> <i class="fas fa-user-check"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
-                </td>
-              </tr>
+              ))
+            }
+             
               
             </tbody>
       </Table>

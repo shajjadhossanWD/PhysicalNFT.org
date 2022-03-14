@@ -13,10 +13,10 @@ const Explore = () => {
     const [page, setPage] = useState(1);
 
     useEffect(()=>{
-        fetch(`./newItems.json?_page=${page}`)
+        fetch(`http://localhost:5007/nfts`)
         .then(res => res.json())
         .then(data => setCollection(data))
-    },[page])
+    },[])
 
     
 
@@ -51,22 +51,22 @@ const Explore = () => {
                        <div className="UserImgNew">
                            <Link to="/user">
                             <img className='imgUsersNew' src={maleImg} alt="" />
-                            <span className="checkNew"><i class="fas fa-check-circle"></i></span>
+                            <span className="checkNew"><i className="fas fa-check-circle"></i></span>
                             </Link>
                           </div>
                            <div className="btnCollection">
                               <button className='buttonCollection'>0h 0m 0s</button>
                            </div>
-                           <img className="imgCollection" src={items.img} alt="" />
+                           <img className="imgCollection" src={items.image} alt="" />
                        </div>
                         <Card.Body>
                     
-                        <Card.Title className='fs-6'>{items.name}</Card.Title>
+                        <Card.Title className='fs-6'>{items.title}</Card.Title>
                         <Card.Text>
-                            <span className='collectionPrice'>{items.price}</span>
-                            <span className='ms-4'>{items.quantity}</span><br />
-                            <span  className='payStatus'>{items.payStatus}</span>
-                            <span className='ms-4 collectionLike'><i class="fas fa-heart"></i> {items.react}</span>
+                            <span className='collectionPrice'>{items.tokenPrices} USDSC</span>
+                            <span className='ms-4'>{items.amount}/20</span><br />
+                            <span className='payStatus'>Place a bid</span>
+                            <span className='ms-4 collectionLike'><i className="fas fa-heart"></i> 90</span>
                         </Card.Text>
                         </Card.Body>
                     </Card>

@@ -1,11 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Table } from 'react-bootstrap';
-import img1 from "./maleprofile.jpg";
 import CreatorsPopUp from './CreatorsPopUp/CreatorsPopUp';
 import DeletePopUp from '../Admin/DeletePopUp/DeletePopUp';
+import { Link } from 'react-router-dom';
 
 const Creator = () => {
   const [open, setOpen] = React.useState(false);
+  const [creators, setCreators] = React.useState([]);
+  const [deleteOrders, setDeleteOrders]= React.useState()
+
+  useEffect(()=>{
+    fetch('http://localhost:5000/creators')
+    .then(res=> res.json())
+    .then(data => setCreators(data))
+  },[deleteOrders])
+
+  const handleOrderDelete = (id) =>{
+    const confirmDelete = window.confirm('Are you sure, you want to delete this Orders? Please Check it again')
+    if(confirmDelete){
+       fetch(`http://localhost:5000/creators/${id}`, {
+           method: 'DELETE',
+           headers:{"content-type": "application/json"}
+       })
+       .then(res => res.json())
+       .then(result =>{
+        if(result.deletedCount > 0){
+            alert('deleted successfully')
+            setDeleteOrders(result)
+        } 
+    })
+
+    }
+   }
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -16,9 +42,9 @@ const Creator = () => {
 
   const [openDelete, setOpenDelete] = React.useState(false);
 
-  const handleClickOpenDelete = () => {
-    setOpenDelete(true);
-  };
+  // const handleClickOpenDelete = () => {
+  //   setOpenDelete(true);
+  // };
 
   const handleCloseDelete = () => {
     setOpenDelete(false);
@@ -34,46 +60,30 @@ const Creator = () => {
            <thead>
               <tr>
                 <th>Image</th>
-                <th>Username</th>
+                <th>Name</th>
+                <th>User Name</th>
                 <th>Email</th>
-                <th>Phone</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-           
+           {
+             creators.map(creator => (
               <tr className='tableRow'>
-                <td> <img className='imgAdmin' src={img1} alt="" /></td>
-                <td>Sam</td>
-                <td>samDslegend@gmail.com</td>
-                <td>01787676726</td>
+                <td> <img className='imgAdmin' src={creator.profileImg} alt="" /></td>
+                <td>{creator.name}</td>
+                <td>{creator.userName}</td>
+                <td>{creator.email}</td>
                 <td>
-               <button className='AccessBtn'><i class="fas fa-pen-alt"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
+                <Link to={`updateCreator/${creator._id}`}>
+                <button className='AccessBtn'><i className="fas fa-pen-alt"></i></button>
+               </Link>
+                <button onClick={()=>handleOrderDelete(creator._id)} className="deleteBtn"><i className="fas fa-trash"></i></button>
                 </td>
               </tr>
-
-              <tr>
-                <td><img className='imgAdmin' src={img1} alt="" /></td>
-                <td>Shajjad Hossan</td>
-                <td>Shajjadhossan@gamil.com</td>
-                <td>01787676726</td>
-                <td>
-               <button className='AccessBtn'> <i class="fas fa-pen-alt"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
-                </td>
-              </tr>
-              
-              <tr>
-                <td><img className='imgAdmin' src={img1} alt="" /></td>
-                <td>Shajjad Hossan</td>
-                <td>Shajjadhossan@gamil.com</td>
-                <td>01787676726</td>
-                <td>
-               <button className='AccessBtn'> <i class="fas fa-pen-alt"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
-                </td>
-              </tr>
+             ))
+           }
+          
               
             </tbody>
       </Table>

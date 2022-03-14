@@ -1,82 +1,42 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MDBDataTable } from 'mdbreact';
 import './NFTs.css';
 import NFTPopUp from './NFTPopUp/NFTPopUp';
+import { Link } from 'react-router-dom';
 
-const data =  [
-    {
-      image: 'https://physicalnft.org/media/1644650081-nft.jpg',
-      title: 'Title of NFT' ,
-      token: "DSL" ,
-     amount: '61',
-      price: '363.500000',
-      category: 'Art',
-      Auction: '22 March, 2022',
-      action: "edit/delete"
-    },
-    {
-      image: 'https://physicalnft.org/media/1644650081-nft.jpg',
-      title: 'Title of NFT' ,
-      token: "DSL" ,
-     amount: '63',
-      price: '363.500000',
-      category: 'Art',
-      Auction: '22 March, 2022',
-      action: "edit/delete"
-    },
-    {
-      image: 'https://physicalnft.org/media/1644650081-nft.jpg',
-      title: 'Title of NFT' ,
-      token: "BNB" ,
-     amount: '66',
-      price: '363.500000',
-      category: 'Real World'   ,
-      Auction: '22 March, 2022',
-      action: "edit/delete"
-     },
-    {
-      image: 'https://physicalnft.org/media/1644650081-nft.jpg',
-      title: 'Title of NFT' ,
-      token: "DSL" ,
-     amount: '22',
-      price: '363.500000',
-      category: 'Art',
-      Auction: '22 March, 2022',
-      action: "edit/delete"
-    },
-    {
-      image: 'https://physicalnft.org/media/1644650081-nft.jpg',
-      title: 'Title of NFT' ,
-      token: "DSL" ,
-     amount: '33',
-      price: '363.500000',
-      category: 'Music',
-      Auction: '22 March, 2022',
-      action: "edit/delete"
-    },
-    {
-      image: 'https://physicalnft.org/media/1644650081-nft.jpg',
-      title: 'Title of NFT' ,
-      token: "BNB" ,
-     amount: '61',
-      price: '363.500000',
-      category: 'Art',
-      Auction: '22 March, 2022',
-      action: "edit/delete"
-    },
-    {
-      image: 'https://physicalnft.org/media/1644650081-nft.jpg',
-      title: 'Title of NFT' ,
-      token: "DSL" ,
-     amount: '59',
-      price: '363.500000',
-      category: 'Real World',
-      Auction: '22 March, 2022',
-      action: "edit/delete"
-    }
 
-  ]
 const NFTs = () => {
+   const [data, setData] = useState([]);
+  //  const [deleteOrders, setDeleteOrders]= useState()
+
+   useEffect(()=>{
+    fetch("http://localhost:5007/nfts")
+    .then(res => res.json())
+    .then(data => {
+      const filterNFTs = data.filter((music)=> music.featureNFT === true)
+      setData(filterNFTs);
+    })
+  },[])
+
+
+  // const handleOrderDelete = (id) =>{
+  //   const confirmDelete = window.confirm('Are you sure, you want to delete this Orders? Please Check it again')
+  //   if(confirmDelete){
+  //      fetch(`http://localhost:5007/nfts/${id}`, {
+  //          method: 'DELETE',
+  //          headers:{
+  //            "content-type": "application/json"
+  //           }
+  //      })
+  //      .then(res => res.json())
+  //      .then(result =>{
+       
+  //           setDeleteOrders(result)
+       
+  //   })
+
+  //   }
+  //  }
 
     useEffect(() => {
         if (data) {
@@ -87,6 +47,14 @@ const NFTs = () => {
                 alt="image"
                 className="someImgClass"
               />
+            )
+            item._id=(
+              <div>
+                <Link to={`updateNFTs/${item._id}`}>
+                  <button className="AccessBtn"><i className="fas fa-pen-alt"></i></button>
+                 </Link>
+                 <button className='deleteBtn'><i className="fas fa-trash"></i></button>
+              </div>
             )
           })
         }
@@ -121,25 +89,25 @@ const NFTs = () => {
       },
       {
         label: 'Price',
-        field: 'price',
+        field: 'tokenPrices',
         sort: 'asc',
         width: 150
       },
       {
         label: 'Category',
-        field: 'category',
+        field: 'catagori',
         sort: 'asc',
         width: 100
       },
       {
         label: 'Auction End',
-        field: 'Auction',
+        field: 'date',
         sort: 'asc',
         width: 200
       },
       {
         label: 'Action',
-        field: 'action',
+        field: '_id',
         sort: 'asc',
         width: 100
       },
@@ -148,10 +116,11 @@ const NFTs = () => {
     rows: data
   };
 
+
+
   const [openNFT, setOpenNFT] = React.useState(false);
   const handleOpenNFT = () => setOpenNFT(true);
   const handleCloseNFT = () => setOpenNFT(false);
-  
 
   return (
     <div>

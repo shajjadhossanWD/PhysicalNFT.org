@@ -66,12 +66,12 @@ const Activity = () => {
             </div>
             <div className="row">
               <div className="col-lg-12">
-              <button className='activityBtn' onClick={() => filterItem('sales')}> <span><i class="fas fa-shopping-basket"></i></span> Sales</button>
-              <button className='activityBtn' onClick={() => filterItem('likes')}><span ><i class="fas fa-heart"></i> </span>Likes</button>
+              <button className='activityBtn' onClick={() => filterItem('sales')}> <span><i className="fas fa-shopping-basket"></i></span> Sales</button>
+              <button className='activityBtn' onClick={() => filterItem('likes')}><span ><i className="fas fa-heart"></i> </span>Likes</button>
               </div>
               <div className="col-lg-12">
-              <button className='activityBtn' onClick={() => filterItem('offers')}><span><i class="fas fa-gavel"> </i></span> Offers</button>
-              <button className='activityBtn' onClick={() => filterItem('followings')}><span><i class="fas fa-check"></i></span> Followings</button>
+              <button className='activityBtn' onClick={() => filterItem('offers')}><span><i className="fas fa-gavel"> </i></span> Offers</button>
+              <button className='activityBtn' onClick={() => filterItem('followings')}><span><i className="fas fa-check"></i></span> Followings</button>
               </div>
             </div>            
             </div>

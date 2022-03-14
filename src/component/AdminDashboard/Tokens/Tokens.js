@@ -6,7 +6,7 @@ const Tokens = () => {
     const [tokens, setTokens] = useState([]);
 
     useEffect(()=>{
-      fetch("../tokens.json")
+      fetch("http://localhost:5007/Tokens")
       .then(res => res.json())
       .then(data => setTokens(data))
     },[])

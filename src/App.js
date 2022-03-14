@@ -12,6 +12,7 @@ import Activity from './component/Stats/Activity/Activity';
 import Rankings from './component/Stats/Rankings/Rankings';
 import UserProfile from './component/UserProfile/UserProfile';
 import TopCreator from './component/TopCreators/TopCreator';
+import Login from './component/Login/Login';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/rankings" element={<Rankings/>}/>
         <Route path="/user/*" element={<UserProfile/>}/>
         <Route path="/admin/*" element={<AdminDashboard />}/>
+        <Route path="/login" element={<Login/>}/>
     </Routes>
     
 

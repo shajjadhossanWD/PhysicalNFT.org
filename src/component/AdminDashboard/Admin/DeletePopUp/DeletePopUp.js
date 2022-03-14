@@ -17,7 +17,7 @@ const DeletePopUp = ({openDelete, handleCloseDelete}) => {
       <div className="delete">
         <DialogContent>
           <DialogContentText className='deleteDiv'>
-             <p className='exclamatoryIcon'><i class="fas fa-exclamation-circle Icon"></i></p> 
+             <p className='exclamatoryIcon'><i className="fas fa-exclamation-circle Icon"></i></p> 
             <p>Are you sure? You are going to remove this. </p>
           </DialogContentText>
         </DialogContent>

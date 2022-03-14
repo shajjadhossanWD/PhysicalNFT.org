@@ -1,12 +1,25 @@
 import React, {useEffect, useState} from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { useParams } from 'react-router-dom';
 
 
-const AddNewCollection = () => {
+const UpdateCollection = () => {
     const [body, setBody] = useState("");
     const [tokens, setTokens] = useState([]);
     const [Collections, setCollections] = React.useState({}); 
+    const { id } = useParams();
+    const [Update, setUpdate] = useState({name: '' , logo: ''});
+
+    useEffect(() => {
+
+        fetch('http://localhost:5007/collections')
+            .then(res => res.json())
+            .then(result => {
+                const data = result.find(offer => offer._id === id)
+                setUpdate(data);
+            })
+    }, [])
 
     const handleBody = e =>{
         console.log(e);
@@ -61,32 +74,39 @@ const AddNewCollection = () => {
 
     return (
         <div>
+         <h4 className='text-white text-start'>Update Collection</h4>
         <form action="" onSubmit={handleSubmit}>
         <div className='addItemDiv'>
         <div className="bannerImg mt-3">
             <p className='text-start text-white'><b>Logo Image</b></p>
             <p className='text-start text-white'><small>250 X 250 recommended</small></p>
-            <div className="profileImgDiv">
-            <i className="far fa-image bannerIcon" ></i>           
+            <div className="profileImgDivUpdate">
+             <img src={Update.logo} alt="" />
            </div>
            <div className="choseDiv">
-           <input type="file"
+           
+           <input 
+            type="file"  
             onBlur={onCollectionBlur}
             name="logo"
+            defaultValue={Update.logo}
             className='text-white'
             />
-          </div>
+           
+           </div>
         </div>
 
         <div className="bannerImg mt-3">
             <p className='text-start text-white'><b>Featured Image</b></p>
             <p className='text-start text-white'><small>600 X 400 recommended</small></p>
-            <div className="FeaturedImgDiv">
-            <i className="far fa-image bannerIcon" ></i>           
+            <div className="FeaturedImgDivUpdate">
+            <img src={Update.FeaturedImg} alt="" />
            </div>
            <div className="choseDiv">
+           
            <input 
-            type="file" 
+            type="file"  
+            defaultValue={Update.FeaturedImg}
             onBlur={onCollectionBlur}
             name="FeaturedImg"
             className='text-white'
@@ -98,16 +118,18 @@ const AddNewCollection = () => {
         <div className="bannerImg mt-3">
             <p className='text-start text-white'><b>Banner Image</b></p>
             <p className='text-start text-white'><small>1400 X 400 recommended</small></p>
-            <div className="bannerImgDiv">
-            <i className="far fa-image bannerIcon" ></i>           
+            <div className="bannerImgDivUpdate">
+             <img src={Update.bannerImg} alt="" />
            </div>
            <div className="choseDiv">
+           
            <input 
-           type="file" 
-           onBlur={onCollectionBlur}
-           name="bannerImg"
-           className='text-white'
-           />           
+            type="file"  
+            defaultValue={Update.bannerImg}
+            onBlur={onCollectionBlur}
+            name="bannerImg"
+            className='text-white'
+            />
            
            </div>
         </div>
@@ -120,6 +142,7 @@ const AddNewCollection = () => {
                 className='creatorInput'
                 onBlur={onCollectionBlur}
                 name="collectionName"
+                defaultValue={Update.collectionName}
                />
             </div>
 
@@ -131,7 +154,7 @@ const AddNewCollection = () => {
                 <input 
                   type="text" 
                   className='creatorInput' 
-                  placeholder='https://physicalnft.org/collections/' 
+                  defaultValue={Update.url}
                   onBlur={onCollectionBlur}
                   name="url"
                 />
@@ -142,12 +165,14 @@ const AddNewCollection = () => {
                 <p className='text-start text-white'><small>Markdown syntax is supported. 0 of 1000 characters used.</small></p>
                 <ReactQuill
                   placeholder='write your item description'
-                  modules={AddNewCollection.modules}
-                  formats={AddNewCollection.formats}
+                  modules={UpdateCollection.modules}
+                  formats={UpdateCollection.formats}
                   onChange={handleBody}
                   value={body}
                   onBlur={onCollectionBlur}
                   name="description"
+                  defaultValue={Update.description}
+
                 />
             </div>
 
@@ -277,7 +302,7 @@ const AddNewCollection = () => {
             </select>
             </div>
             </div>
-            <input type="submit" value="Create" className='createBtn' />
+            <input type="submit" value="Update" className='createBtn' />
         </div>
         </form>
 
@@ -288,7 +313,7 @@ const AddNewCollection = () => {
     );
 };
 
-AddNewCollection.modules={
+UpdateCollection.modules={
     toolbar:[
         [{header: '1'}, {header: '2'}, {header: [3, 4, 5, 6]}, {font: []}],
         [{size: []}],
@@ -299,7 +324,7 @@ AddNewCollection.modules={
         ['code-block'],
     ],
 };
-AddNewCollection.formats = [
+UpdateCollection.formats = [
     'header',
     'font',
     'size',
@@ -317,4 +342,4 @@ AddNewCollection.formats = [
 ];
 
 
-export default AddNewCollection;
+export default UpdateCollection;

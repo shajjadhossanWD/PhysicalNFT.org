@@ -65,15 +65,15 @@ const Footer = () => {
             
             <div className="iconDivSocial">
                <span>Follow Us: </span> 
-                <a className="iconItem ms-2" target="_any" href={link.facebook}><i class="fab fa-facebook-f"></i></a>
-                <a className="iconItem" target="_any" href={link.instagram}><i class="fab fa-instagram"></i></a>
-                <a className="iconItem" target="_any" href={link.twitter}><i class="fab fa-twitter"></i></a>
-                <a className="iconItem" target="_any" href={link.tiktok}><i class="fab fa-tiktok"></i></a>
-                <a className="iconItem" target="_any" href={link.linkedin}><i class="fab fa-linkedin-in"></i></a>
-                <a className="iconItem" target="_any" href={link.pinterest}><i class="fab fa-pinterest-p"></i></a>
-                <a className="iconItem" target="_any" href={link.medium}><i class="fab fa-medium-m"></i></a>
-                <a className="iconItem" target="_any" href={link.telegram}><i class="fab fa-telegram-plane"></i></a>
-                <a className="iconItem" target="_any" href={link.discord}><i class="fab fa-discord"></i></a>
+                <a className="iconItem ms-2" target="_any" href={link.facebook}><i className="fab fa-facebook-f"></i></a>
+                <a className="iconItem" target="_any" href={link.instagram}><i className="fab fa-instagram"></i></a>
+                <a className="iconItem" target="_any" href={link.twitter}><i className="fab fa-twitter"></i></a>
+                <a className="iconItem" target="_any" href={link.tiktok}><i className="fab fa-tiktok"></i></a>
+                <a className="iconItem" target="_any" href={link.linkedin}><i className="fab fa-linkedin-in"></i></a>
+                <a className="iconItem" target="_any" href={link.pinterest}><i className="fab fa-pinterest-p"></i></a>
+                <a className="iconItem" target="_any" href={link.medium}><i className="fab fa-medium-m"></i></a>
+                <a className="iconItem" target="_any" href={link.telegram}><i className="fab fa-telegram-plane"></i></a>
+                <a className="iconItem" target="_any" href={link.discord}><i className="fab fa-discord"></i></a>
             </div>
         </div>
         </div>

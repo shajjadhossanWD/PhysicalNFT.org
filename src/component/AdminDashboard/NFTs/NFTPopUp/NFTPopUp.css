@@ -94,3 +94,6 @@
 .NFTPopupTitle{
     color: white;
 }
+.priceToken{
+    display: none;
+}

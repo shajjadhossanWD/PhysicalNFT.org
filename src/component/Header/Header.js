@@ -69,7 +69,7 @@ const Header = () => {
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#explore1" as={Link} to="/rankings">Rankings</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link onClick={handleClickOpen} className="navbarBtn" ><i class="fas fa-wallet"></i></Nav.Link>
+                        <Nav.Link onClick={handleClickOpen} className="navbarBtn" ><i className="fas fa-wallet"></i></Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

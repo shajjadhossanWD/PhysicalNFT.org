@@ -61,7 +61,7 @@ const UserProfile = () => {
                                     <div className="UserImgNew">
                                     <Link to="/user">
                                         <img className='imgUsersNew' src={maleImg} alt="" />
-                                        <span className="checkNew"><i class="fas fa-check-circle"></i></span>
+                                        <span className="checkNew"><i className="fas fa-check-circle"></i></span>
                                         </Link>
                                     </div>
                                     <div className="btnCollection">
@@ -75,7 +75,7 @@ const UserProfile = () => {
                                             <span>{items.price}</span>
                                             <span className='ms-4'>{items.quantity}</span><br />
                                             <span className='payStatus'>{items.payStatus}</span>
-                                            <span className='ms-4 collectionLike'><i class="fas fa-heart"></i> {items.react}</span>
+                                            <span className='ms-4 collectionLike'><i className="fas fa-heart"></i> {items.react}</span>
                                         </Card.Text>
                                         </Card.Body>
                                     </Card>
@@ -95,7 +95,7 @@ const UserProfile = () => {
                                     <div className="UserImgNew">
                                     <Link to="/user">
                                         <img className='imgUsersNew' src={maleImg} alt="" />
-                                        <span className="checkNew"><i class="fas fa-check-circle"></i></span>
+                                        <span className="checkNew"><i className="fas fa-check-circle"></i></span>
                                         </Link>
                                     </div>
                                     <div className="btnCollection">
@@ -109,7 +109,7 @@ const UserProfile = () => {
                                             <span>{items.price}</span>
                                             <span className='ms-4'>{items.quantity}</span><br />
                                             <span className='payStatus'>{items.payStatus}</span>
-                                            <span className='ms-4 collectionLike'><i class="fas fa-heart"></i> {items.react}</span>
+                                            <span className='ms-4 collectionLike'><i className="fas fa-heart"></i> {items.react}</span>
                                         </Card.Text>
                                         </Card.Body>
                                     </Card>
@@ -129,7 +129,7 @@ const UserProfile = () => {
                                     <div className="UserImgNew">
                                     <Link to="/user">
                                         <img className='imgUsersNew' src={maleImg} alt="" />
-                                        <span className="checkNew"><i class="fas fa-check-circle"></i></span>
+                                        <span className="checkNew"><i className="fas fa-check-circle"></i></span>
                                         </Link>
                                     </div>
                                     <div className="btnCollection">
@@ -143,7 +143,7 @@ const UserProfile = () => {
                                             <span className='collectionPrice'>{items.price}</span>
                                             <span className='ms-4'>{items.quantity}</span><br />
                                             <span className='payStatus'>{items.payStatus}</span>
-                                            <span className='ms-4 collectionLike'><i class="fas fa-heart"></i> {items.react}</span>
+                                            <span className='ms-4 collectionLike'><i className="fas fa-heart"></i> {items.react}</span>
                                         </Card.Text>
                                         </Card.Body>
                                     </Card>

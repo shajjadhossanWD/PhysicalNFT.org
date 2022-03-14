@@ -17,8 +17,41 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function AdminPopUp({open, handleClose}) {
   const [value, setValue] = React.useState()
+  const [isError, setIsError]= React.useState();
 
-  
+  const nameRef = React.useRef();
+  const userNameRef= React.useRef();
+  const emailRef= React.useRef();
+  const phoneRef= React.useRef();
+  const passwordRef= React.useRef();
+  const cPasswordRef = React.useRef();
+  const imageRef= React.useRef();  
+ 
+
+  const handleAddAdmin=(e)=>{
+     const name = nameRef.current.value;
+     const userName = userNameRef.current.value;
+     const email = emailRef.current.value;
+     const phone = phoneRef.current.value;
+     const password = passwordRef.current.value;
+     const cPass = cPasswordRef.current.value;
+     const image = imageRef.current.value;
+
+    if(password!==cPass){
+      return setIsError("Confirm password & password are note match")
+    }
+     const NFTs = {name, userName, email, phone, password, cPass, image};
+     fetch('http://localhost:5007/creators',{
+       method: 'POST',
+       headers:{
+         'content-type': 'application/json'
+       },
+       body: JSON.stringify(NFTs)
+     })
+     .then()
+
+     e.preventDefault();
+  }
 
 
   return (
@@ -32,18 +65,22 @@ export default function AdminPopUp({open, handleClose}) {
         className='dialog'
       >
        <div className='dailogueAdmin'>
-        <DialogTitle className='titleWallet'><i class="fas fa-user"></i>Add Admin </DialogTitle>
+        <DialogTitle className='titleWallet'><i className="fas fa-user"></i>Add Admin </DialogTitle>
 
         <DialogContent>
         <DialogContentText id="alert-dialog-slide-description">
+        <form  
+        onSubmit={handleAddAdmin}
+        encType="multipart/form-data"
+        >
          <div className="row addAdminDiv">
              <div className="col-lg-8">
                  <p>Full Name</p>
-                 <input type="text" /> <br />
+                 <input type="text" ref={nameRef}/> <br />
                  <p>User Name</p>
-                 <input type="text" name="" id="" />
+                 <input type="text" name="" id="" ref={userNameRef}/>
                  <p>Email</p>
-                 <input type="email" required/>
+                 <input type="email" required ref={emailRef}/>
                  <p>Phone</p>
                  <PhoneInput
                     international
@@ -51,21 +88,24 @@ export default function AdminPopUp({open, handleClose}) {
                     defaultCountry="RU"
                     value={value}
                     onChange={setValue}
+                    ref={phoneRef}
                     error={value ? (isValidPhoneNumber(value) ? undefined : 'Invalid phone number') : 'Phone number required'}
                     />
                 <p>Password</p>
-                <input type="password" />
+                <input type="password" ref={passwordRef}/>
                 <p>Re Enter Password</p>
-                <input type="password" />
+                <input type="password" ref={cPasswordRef}/>
+                <p className='errorText'>{isError}</p>
              </div>
               <div className="col-lg-4">
                   <p>Image</p>
                   <img className='addAdminImg' src={imgAdd} alt="" /> <br />
-                  <button className='addAdminImgBtn'>Choose File</button>
-                  <input type="text" />
+                  <input type="file" ref={imageRef}  className='text-white'/>
+
               </div>
              <button className='adminBtnAdd'>Add</button>
          </div>
+         </form>
        </DialogContentText>
         </DialogContent>
         <DialogActions>

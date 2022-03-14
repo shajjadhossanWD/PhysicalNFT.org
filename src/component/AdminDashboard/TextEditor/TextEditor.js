@@ -10,6 +10,7 @@ const TextEditor = () => {
         console.log(e);
         setBody(e);
     }
+    
     return (
         <div>
               <ReactQuill

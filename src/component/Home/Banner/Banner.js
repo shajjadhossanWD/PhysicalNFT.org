@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import './Banner.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -22,6 +22,11 @@ const Banner = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  // const [banner, setBanner] = useState([])
+
+  // useEffect(()=>{
+
+  // },[])
     return (
         <div className='banner'>
         <h1 className="hidden">hidden text</h1>
@@ -34,6 +39,8 @@ const Banner = () => {
         modules={[EffectFlip, Pagination, Navigation]}
         className="mySwiper container sliderSwiper"
       >
+
+
         <SwiperSlide>
           <div className="row sliderRow">
               <div className="col-lg-6">
@@ -46,7 +53,7 @@ const Banner = () => {
                   <div className="img">
                   <Link to="/user">
                    <img src={user} alt="user" className="userImg"/>
-                   <span className="checkBanner"><i class="fas fa-check-circle"></i></span>
+                   <span className="checkBanner"><i className="fas fa-check-circle"></i></span>
 
                   </Link>
                   </div>
@@ -95,7 +102,7 @@ const Banner = () => {
                 <div className="userProfile">
                   <div className="img">
                    <img src={user} alt="user" className="userImg"/>
-                   <span className="checkBanner"><i class="fas fa-check-circle"></i></span>
+                   <span className="checkBanner"><i className="fas fa-check-circle"></i></span>
 
                   </div>
                   <div className="detailUser">
@@ -139,7 +146,7 @@ const Banner = () => {
                 <div className="userProfile">
                   <div className="img">
                    <img src={user} alt="user" className="userImg"/>
-                   <span className="checkBanner"><i class="fas fa-check-circle"></i></span>
+                   <span className="checkBanner"><i className="fas fa-check-circle"></i></span>
 
                   </div>
                   <div className="detailUser">

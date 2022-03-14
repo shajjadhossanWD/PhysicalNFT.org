@@ -1,0 +1,83 @@
+.updateCreatorDiv{
+    background-color: #272D47;
+    padding: 40px;
+    border-radius: 20px;
+}
+.UpdateImageCreat{
+    text-align: start;
+}
+.UpdateImageCreat img{
+    width: 12rem;
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+.UpdateImageCreat button{
+    padding: 5px;
+}
+.UpdateImageCreat input{
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid rgba(177, 186, 206, 0.527);
+    color: rgba(177, 186, 206, 0.781);
+}
+.bioCreat h6{
+    text-align: start;
+    color: rgba(197, 202, 214, 0.781);
+    margin-top: 1rem;
+}
+
+.bioCreat textarea{
+    width: 80%;
+    display: flex;
+    border: 1px solid rgba(177, 186, 206, 0.527);
+
+}
+.nameCreate h6{
+    text-align: start;
+    color: rgba(197, 202, 214, 0.781);
+}
+
+.nameCreate, .emailCreat, .userCreate{
+    margin-bottom: 1rem;
+}
+.nameCreate input{
+    display: flex;
+    background-color: transparent;
+    border: 1px solid rgba(177, 186, 206, 0.335);
+    padding: 6px;
+    width: 100%;
+    border-radius: 5px;
+    color: rgba(197, 202, 214, 0.781);
+
+}
+.userCreate h6{
+    text-align: start;
+    color: rgba(197, 202, 214, 0.781);
+}
+.userCreate input{
+    display: flex;
+    background-color: transparent;
+    border: 1px solid rgba(177, 186, 206, 0.335);
+    padding: 6px;
+    width: 100%;
+    border-radius: 5px;
+    color: rgba(197, 202, 214, 0.781);
+
+}
+.emailCreat h6{
+    text-align: start;
+    color: rgba(197, 202, 214, 0.781);
+}
+.emailCreat input{
+    display: flex;
+    background-color: transparent;
+    border: 1px solid rgba(177, 186, 206, 0.404);
+    padding: 6px;
+    width: 100%;
+    border-radius: 5px;
+    color: rgba(197, 202, 214, 0.781);
+}
+.linksCreate h6{
+    text-align: start;
+    color: rgba(197, 202, 214, 0.781);
+}

@@ -24,6 +24,9 @@ import AddNewCollection from './Collections/AddNewCollection/AddNewCollection';
 // import Admin from './Admin/Admin';
 import profileImg from './maleprofile.jpg';
 import AdminProfile from './AdminProfile/AdminProfile';
+import UpdateCollection from './Collections/UpdateCollection/UpdateCollection';
+import UpdateCreator from './Creator/UpdateCreator/UpdateCreator';
+import UpdateNFTs from './NFTs/UpdateNFTs/UpdateNFTs';
 
 const menuLinkStyles =({isActive})=>{
   return{
@@ -46,7 +49,7 @@ function AdminDashboard(props) {
       <img className='dashLogo' src={logo} alt="" />
       <Divider/>
        <div className="menuDiv">
-       <NavLink className="dashboardMenu" style={menuLinkStyles} to="dashboard"> <span className='navIconAdmin'><i class="fas fa-th-large"></i></span> Dashboard</NavLink><br />
+       <NavLink className="dashboardMenu" style={menuLinkStyles} to="dashboard"> <span className='navIconAdmin'><i className="fas fa-th-large"></i></span> Dashboard</NavLink><br />
        <NavLink className="dashboardMenu" style={menuLinkStyles} to="adminUser"> <span className='navIconAdmin'><i className="fas fa-user"></i></span>  Admin</NavLink><br />
        <NavLink className="dashboardMenu" style={menuLinkStyles} to="creator"> <span className='navIconAdmin'><i className="fas fa-user-friends"></i></span> Creators</NavLink><br />
        <NavLink className="dashboardMenu" style={menuLinkStyles} to="collections"> <span className='navIconAdmin'><i className="fas fa-tags"></i></span> Collections</NavLink><br />
@@ -100,7 +103,7 @@ function AdminDashboard(props) {
               <Link to="/home">Admin Name</Link><br />
               <hr />
               <Link to="admin" className='mb-3 d-flex'><i className="fas fa-user me-2"></i>  Profile</Link>
-              <p className='text-start'><i class="fas fa-sign-out-alt"></i> log Out</p>
+              <p className='text-start'><i className="fas fa-sign-out-alt"></i> log Out</p>
             </div> 
       </AppBar>
    
@@ -149,13 +152,17 @@ function AdminDashboard(props) {
              <Route path='adminUser' element={<Admin/>}/>
              <Route path='' element={<Dashboard/>}/>
              <Route path='dashboard' element={<Dashboard/>}/>
-             <Route path='creator' element={<Creator/>}/>
+             <Route path='creator/*' element={<Creator/>}/>
              <Route path='collections/*' element={<Collections/>}/>
-             <Route path='nfts' element={<NFTs/>}/>
+             <Route path='nfts/*' element={<NFTs/>}/>
              <Route path='tokens' element={<Tokens/>}/>
              <Route path='editor/*' element={<Editor/>}/>
              <Route path='collections/newCollection' element={<AddNewCollection/>}/>
              <Route path="admin" element={<AdminProfile/>} />
+             <Route path="collections/updateCollection/:id" element={<UpdateCollection/>}/>
+             <Route path="creator/updateCreator/:id" element={<UpdateCreator/>}/>
+             <Route path="nfts/updateNFTs/:id" element={<UpdateNFTs/>}/>
+
          </Routes>
          </div>
       </Box>

@@ -87,11 +87,23 @@
     cursor: pointer;
     padding: 2rem 10rem;
     color: #849bb8;
-
+   
 }
 
 .bannerImgDiv i{
     font-size: 3.5rem;
+}
+
+.bannerImgDivUpdate{
+    width: 70%;
+    border: 2px dotted #849bb8;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #849bb8;
+    overflow: hidden;
+}
+.bannerImgDivUpdate img{
+    width: 100%;
 }
 
 .bannerImgDiv:hover, .FeaturedImgDiv:hover, .profileImgDiv:hover{
@@ -123,6 +135,18 @@
 .FeaturedImgDiv i{
     font-size: 3.5rem;
 }
+
+.FeaturedImgDivUpdate{
+    width: 40%;
+    border: 2px dotted #849bb8;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #849bb8;
+    overflow: hidden;
+}
+.FeaturedImgDivUpdate img{
+    width: 100%;
+}
 .profileImgDiv{
     width: 15%;
     border: 2px dotted #849bb8;
@@ -133,6 +157,40 @@
 }
 .profileImgDiv i{
     font-size: 3.5rem;
+}
+.profileImgDivUpdate{
+    width: 15%;
+    height: 8rem;
+    border: 2px dotted #849bb8;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #849bb8;
+    overflow: hidden;
+}
+.profileImgDivUpdate img{
+  width: 100%;
+  height: 8rem;
+}
+.collectionInputSelect{
+    background-color: transparent;
+    padding: 8px;
+    border: 1px solid rgb(158, 159, 206);
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 5px;
+}
+.collectionInputSelect option{
+    background-color: #272D47;
+    background-color: white;
+}
+.imgInputChosen{
+    background-color: transparent;
+    color: white;
+}
+.iconCreator i{
+    width: 40px;
+    color: rgb(172, 181, 200);
 }
 @media only screen and (max-width: 964px) {
    .tableNormal{

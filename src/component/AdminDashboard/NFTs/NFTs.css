@@ -77,6 +77,68 @@ table.dataTable tbody td {
     color: white !important;
 }
 
+.UpdateNftsDiv{
+    
+        background-color: #272D47;
+        padding: 40px;
+        border-radius: 20px;
+    
+}
+.chooseImgUpdate{
+    display: flex;
+    text-align: start;
+    margin-bottom: 1rem;
+}
+.chooseImgUpdate input{
+    padding: 7px;
+    background-color: transparent;
+    border: 1px solid rgba(154, 167, 197, 0.281);
+    color: rgb(143, 155, 182);
+    width: 100%;
+    border-radius: 0px 5px 5px 0px;
+}
+.chooseImgUpdate button{
+    padding: 7px;
+    width: 8rem;
+
+}
+.UpdateNftTitle{
+    text-align: start;
+    color: rgb(143, 155, 182);
+}
+.UpdateTitle h6{
+    text-align: start;
+    color: rgb(143, 155, 182);
+}
+.UpdateTitle{
+    margin-bottom: 1rem;
+}
+.UpdateTitle input{
+    padding: 7px;
+    background-color: transparent;
+    border: 1px solid rgba(154, 167, 197, 0.281);
+    color: rgb(143, 155, 182);
+    width: 100%;
+    border-radius: 5px;
+}
+.UpdateNftDes{
+    margin-bottom: 1rem;
+}
+.UpdateNftDes h6{
+    text-align: start;
+    color: rgb(143, 155, 182);
+}
+.UpdateNftDes input{
+    background-color: transparent;
+    border: 1px solid rgba(154, 167, 197, 0.281);
+    color: rgb(143, 155, 182);
+    width: 100%;
+    border-radius: 5px;
+}
+.selectUpdateDiv{
+    text-align: start;
+    margin-top: 1rem;
+}
 @media only screen and (max-width: 1094px) {
     .NFTsTables{
         overflow: scroll;

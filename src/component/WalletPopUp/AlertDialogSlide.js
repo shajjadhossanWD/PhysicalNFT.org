@@ -30,7 +30,7 @@ export default function AlertDialogSlide({open, handleClose}) {
         className='dialog'
       >
        <div className='dailogue'>
-        <DialogTitle className='titleWallet'><i class="fas fa-user"></i>  My Wallet</DialogTitle>
+        <DialogTitle className='titleWallet'><i className="fas fa-user"></i>  My Wallet</DialogTitle>
 
         <DialogContent>
         <DialogContentText id="alert-dialog-slide-description">

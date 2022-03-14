@@ -1,0 +1,49 @@
+.loginPage{
+    background-color: #705EC8;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoLogin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 0.5px solid #3a405d;
+
+}
+
+.loginLogoImg{
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.login{
+    background-color: #272D47;
+    padding: 20px;
+    width: 40%;
+    border-radius: 20px;
+}
+.inputGroup{
+    margin-top: 20px;
+}
+.userName, .password{
+    background-color: #20223C;
+    color: white;
+    padding: 5px;    
+    
+}

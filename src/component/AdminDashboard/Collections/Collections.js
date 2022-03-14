@@ -1,21 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import DeletePopUp from '../Admin/DeletePopUp/DeletePopUp';
 import { Table } from 'react-bootstrap';
-import img1 from './coll-2.jpg';
-import img2 from './coll-3.jpg';
 import './Collections.css';
 import { Link } from 'react-router-dom';
 
 const Collections = () => {
     const [openDelete, setOpenDelete] = React.useState(false);
+    const [collections, setCollections]= React.useState([]);
+    const [deleteOrders, setDeleteOrders]= React.useState()
 
-    const handleClickOpenDelete = () => {
-      setOpenDelete(true);
-    };
+    useEffect(()=>{
+      fetch('http://localhost:5007/collections')
+      .then(res => res.json())
+      .then(data => setCollections(data))
+    },[deleteOrders])
+
+    const handleOrderDelete = (id) =>{
+      const confirmDelete = window.confirm('Are you sure, you want to delete this Orders? Please Check it again')
+      if(confirmDelete){
+         fetch(`http://localhost:5007/collections/${id}`, {
+             method: 'DELETE',
+             headers:{"content-type": "application/json"}
+         })
+         .then(res => res.json())
+         .then(result =>{
+          if(result.deletedCount > 0){
+              alert('deleted successfully')
+              setDeleteOrders(result)
+          } 
+      })
+  
+      }
+     }
+
+  //  const handleClickOpenDelete = () => {
+  //     setOpenDelete(true);
+  //   };
   
     const handleCloseDelete = () => {
       setOpenDelete(false);
     };
+ 
 
     return (
         <div className='collectionClass'>
@@ -31,47 +56,30 @@ const Collections = () => {
             <Table className='text-white adminDataTable'>
             <thead>
               <tr>
-                <th>Image</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Action</th>
+                <th>COLLECTION</th>
+                <th>COLLECTION NAME</th>
+                <th>CATEGORY</th>
+                <th>TOKEN</th>
+                <th>ACTION</th>
               </tr>
             </thead>
             <tbody>
-           
+           {
+             collections.map(collection => (
               <tr className='tableRow'>
-                <td> <img className='imgCollections' src={img1} alt="" /></td>
-                <td>Sam</td>
-                <td>samDslegend@gmail.com</td>
-                <td>01787676726</td>
+                <td> <img className='imgCollections' src={collection.FeaturedImg} alt="" /></td>
+                <td>{collection.collectionName}</td>
+                <td>{collection.category}</td>
+                <td>{collection.paymentToken}</td>
                 <td>
-               <button className='AccessBtn'><i class="fas fa-pen-alt"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
+                <Link to={`updateCollection/${collection._id}`}>
+                 <button className='AccessBtn'><i className="fas fa-pen-alt"></i></button>
+               </Link>
+               <button onClick={()=>handleOrderDelete(collection._id)} className="deleteBtn"><i className="fas fa-trash"></i></button>
                 </td>
               </tr>
-
-              <tr className='tableRow'>
-                <td> <img className='imgCollections' src={img2} alt="" /></td>
-                <td>Sam</td>
-                <td>samDslegend@gmail.com</td>
-                <td>01787676726</td>
-                <td>
-               <button className='AccessBtn'><i class="fas fa-pen-alt"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
-                </td>
-              </tr>
-
-              <tr>
-                <td><img className='imgCollections' src={img1} alt="" /></td>
-                <td>Shajjad Hossan</td>
-                <td>Shajjadhossan@gamil.com</td>
-                <td>01787676726</td>
-                <td>
-               <button className='AccessBtn'> <i class="fas fa-pen-alt"></i></button>
-                <button onClick={handleClickOpenDelete} className="deleteBtn"><i class="fas fa-trash"></i></button>
-                </td>
-              </tr>
+             ))
+           }
               
             </tbody>
       </Table>
