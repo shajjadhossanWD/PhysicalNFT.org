@@ -10,7 +10,7 @@ import 'react-phone-number-input/style.css'
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LanguageIcon from '@mui/icons-material/Language';
-import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -18,53 +18,56 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function CreatorsPopUp({open, handleClose}) {
 
-  const [name, setName] = useState("");
-  const [userName, setUserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [bio, setBio] = useState("");
-  const [twitter, setTwitter] = useState("");
-  const [instagram, setInstagram] = useState("");
-  const [website, setWebsite] = useState("");
-  const [userImg, setUserImg] = useState("");
-  // const [coverImg, setCoverImg] = useState("");
-  const [message, setMessage] = useState("");
-
-  const onChangeFile = e =>{
-    setUserImg(e.target.files[0])
-    // setCoverImg(e.target.files[0])
-  }
-
-  const changeOnClick = (e) =>{
-    e.preventDefault();
+  const navigate = useNavigate();
+  const [message, setMessage] = useState('');
+  const [date, setDate] = useState({
+      name:'',
+      userName:'',
+      email:'',
+      bio:'',
+      twitter:'',
+      instagram:'',
+      website:'',
+      profileImg:'',
+      coverImg:'',
+      
+  });
+  const handleChange=(e, name) =>{
+      let value = name === "profileImg" ? e.target.files[0] : e.target?.value ;
     
-    const formData = new FormData();
+        setDate({...date, [name]: value});
 
-    formData.append("name", name);
-    formData.append("userName", userName);
-    formData.append("email", email);
-    formData.append("bio", bio);
-    formData.append("twitter", twitter);
-    formData.append("instagram", instagram);
-    formData.append("website", website);
-    formData.append("profileImg", userImg);
-    // formData.append("coverImg", coverImg);
+      
+      
+  };
+  const handleSubmit = async(e)=>{
+    e.preventDefault()
+    console.log(date);
+      try{
+          let formData = new FormData()
+          formData.append('name', date.name)
+          formData.append('userName', date.userName)
+          formData.append('email', date.email)
+          formData.append('bio', date.bio)
+          formData.append('twitter', date.twitter)
+          formData.append('instagram', date.instagram)
+          formData.append('website', date.website)
+          formData.append('profileImg', date.profileImg)
+          formData.append('coverImg', date.coverImg)
 
-    setName("");
-    setUserName("");
-    setEmail("");
-    setBio("");
-    setInstagram("");
-    setTwitter("");
-    setWebsite("");
-
-
-    axios.post("http://localhost:5007/creators", formData)
-    .then(res => setMessage(res.data))
-    .catch((err)=> {
-      console.log(err);
-    })
-
-  }
+          const res = await fetch('http://localhost:5007/creator',{
+              method: "POST",
+              body: formData,
+          });
+          if(res.ok){
+              setDate({name: '', userName:'', email:'', bio:'', twitter:'', instagram:'', website:'', profileImg:'', coverImg:''});
+              navigate('/admin');
+              setMessage('New Creator added successfully!')
+          }
+      }catch(err){
+          console.log(err)
+      }
+  };
 
   return (
     <div className='dialogDiv'>
@@ -78,45 +81,57 @@ export default function CreatorsPopUp({open, handleClose}) {
       >
        <div className='dailogueAdmin'>
         <DialogTitle className='titleWallet'>New Creator </DialogTitle>
-
+          
         <DialogContent>
         <DialogContentText id="alert-dialog-slide-description">
-        <form  onSubmit={changeOnClick} encType="multipart/form-data">
+        <p>{message}</p>
+        <form  onSubmit={handleSubmit}>
 
          <div className="row addAdminDiv">
              <h6 className="linkTitle">Profile</h6>
-             <span>{message}</span>
              <div className="col-lg-6">
                  <p>Full Name</p>
                  <input 
+                  className='form-control'
+                  placeholder='Enter name'
                   type="text" 
-                  OnChange={(e)=> setName(e.target.value)}
-                  
+                  name="name"
+                  value={date.name}
+                  onChange={(e)=>handleChange(e, "name")}                 
                  /> <br />
 
                  <p>User Name</p>
                  <input 
+                  className='form-control'
+                  placeholder='Enter username'
                   type="text" 
-                  OnChange={(e)=> setUserName(e.target.value)}
-                  defaultValue={userName}
+                  name="userName"
+                  value={date.userName}
+                  onChange={(e)=>handleChange(e, 'userName')}
                   
                  />
 
                  <p>Email</p>
                  <input 
-                 type="email" 
-                 required
-                 OnChange={(e)=> setEmail(e.target.value)}
-                 defaultValue={email}
+                  className='form-control'
+                  placeholder='Enter email'
+                  type="email" 
+                  name="email"
+                  value={date.email}
+                  onChange={(e)=>handleChange(e, 'email')}
                  
                  />
 
                  <p>Bio</p>
                  <textarea 
-                 cols="30" 
-                 rows="3"
-                 OnChange={(e)=> setBio(e.target.value)}
-                 defaultValue={bio}
+                  cols="30" 
+                  rows="3"
+                  className='form-control'
+                  placeholder='write your bio'
+                  type="text" 
+                  name="bio"
+                  value={date.bio}
+                  onChange={(e)=>handleChange(e, 'bio')}
                  
     
                  ></textarea>
@@ -127,49 +142,55 @@ export default function CreatorsPopUp({open, handleClose}) {
                    <p className="d-flex">
                    <span className='iconCreator'><TwitterIcon/></span>
                    <input 
-                    className="creatorsInput" 
                     type="text" 
                     placeholder='Link twitter profile' 
-                    OnChange={(e)=> setTwitter(e.target.value)}
-                    defaultValue={twitter}
+                    className='form-control'
+                    name="twitter"
+                    value={date.twitter}
+                    onChange={(e)=>handleChange(e, 'twitter')}
                     />
                    </p>
 
                    <p className="d-flex">
                    <span className='iconCreator'><InstagramIcon/></span>
                    <input 
-                    className="creatorsInput" 
                     type="text" 
                     placeholder='Link instagram profile' 
-                    OnChange={(e)=> setInstagram(e.target.value)}
-                   />
+                    className='form-control'
+                    name="instagram"
+                    value={date.instagram}
+                    onChange={(e)=>handleChange(e, 'instagram')}                   />
                    </p>
 
                    <p className="d-flex">
                    <span className='iconCreator'><LanguageIcon/></span>
                    <input 
-                    className="creatorsInput" 
                     type="text" 
                     placeholder='Link your website' 
-                    OnChange={(e)=> setWebsite(e.target.value)}
-                    defaultValue={website}
+                    className='form-control'
+                    name="website"
+                    value={date.website}
+                    onChange={(e)=>handleChange(e, 'website')}
                    />
                    </p>
                     <p>Image</p>
                     <input 
-                     type="file" 
-                     placeholder='Profile Image' 
-                     OnChange={onChangeFile}
-                     filename="profileImg"
+                      className='form-control'
+                      type="file" 
+                      accept='profileImg/*'
+                      name="profileImg"
+                      onChange={(e)=> handleChange(e, 'profileImg')}
                      />
 
-                   {/* <p>Cover Image</p>
+                   <p>Cover Image</p>
                     <input 
-                     type="file" 
-                     placeholder='Cover Image' 
-                     OnChange={onChangeFile}
+                     className='form-control'
+                      type="file" 
+                      accept='coverImg/*'
+                      name="coverImg"
+                      onChange={(e)=> handleChange(e, 'coverImg')}
                   
-                     /> */}
+                     /> 
 
               </div>
               <input type="submit" value="Add" className='adminBtnAdd'  />             

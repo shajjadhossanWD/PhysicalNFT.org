@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 import logo from './logo192.png'
 const Login = () => {
@@ -6,7 +7,7 @@ const Login = () => {
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePassword = () => {
         setPasswordShown(!passwordShown);
-      };
+    };
     return (
         <div className='loginPage'>
             <div className="login">
@@ -16,16 +17,19 @@ const Login = () => {
 
              <form action="" className='inputGroup'>
             <div className="user">
-                <p><i className="fas fa-user"></i></p> 
+                <p className='iconBox'><i className="fas fa-user"></i></p> 
                 <input type="text" name="" className='userName' placeholder='User Name' id=""  />
             </div>
             <div className="pass">
-                <p><i className="fas fa-lock"></i></p>
+                <p className='iconBox'><i className="fas fa-lock"></i></p>
                 <input type={passwordShown ? "text" : "password"} className="password" placeholder='Password'/>
-                <button onClick={togglePassword}><i className="fas fa-eye"></i></button>
+                <button onClick={togglePassword} className='iconBoxBtn'><i className="fas fa-eye"></i></button>
             </div>
-            <input type="submit" value="Log In" />
+            <input type="submit" value="Login" className='loginBtn'/>
             </form>
+            <Link to="/forgot_password">
+            <p className='forgotPass'><small>Forgot password?</small></p>
+            </Link>
             </div>
         </div>
     );

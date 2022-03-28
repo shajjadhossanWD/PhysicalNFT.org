@@ -13,6 +13,7 @@ import Rankings from './component/Stats/Rankings/Rankings';
 import UserProfile from './component/UserProfile/UserProfile';
 import TopCreator from './component/TopCreators/TopCreator';
 import Login from './component/Login/Login';
+import ForgotLogin from './component/ForgotLogin/ForgotLogin';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/user/*" element={<UserProfile/>}/>
         <Route path="/admin/*" element={<AdminDashboard />}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/forgot_password" element={<ForgotLogin/>}/>
     </Routes>
     
 

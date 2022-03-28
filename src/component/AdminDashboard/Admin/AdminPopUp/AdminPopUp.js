@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -10,49 +10,60 @@ import './AdminPopUp.css';
 import PhoneInput,  { isValidPhoneNumber } from 'react-phone-number-input';
 import 'react-phone-number-input/style.css'
 import imgAdd from '../maleprofile.jpg';
-
+import { useNavigate } from 'react-router-dom';
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function AdminPopUp({open, handleClose}) {
-  const [value, setValue] = React.useState()
-  const [isError, setIsError]= React.useState();
+  const navigate = useNavigate();
+  const [date, setDate] = useState({
+      name:'',
+      userName:'',
+      email:'',
+      phone:'',
+      password:'',
+      cPassword:'',
+      image:'',
+      
+  });
+  const handleChange=(e, name) =>{
+      let value = name === "image" ? e.target.files[0] : e.target?.value ;
+      if( name === 'phone'){
+        setDate({...date, [name]: e });
+        console.log(date)
+      }else{
+        setDate({...date, [name]: value});
 
-  const nameRef = React.useRef();
-  const userNameRef= React.useRef();
-  const emailRef= React.useRef();
-  const phoneRef= React.useRef();
-  const passwordRef= React.useRef();
-  const cPasswordRef = React.useRef();
-  const imageRef= React.useRef();  
+      }
+      
+  };
+  const handleSubmit = async(e)=>{
+    e.preventDefault()
+    console.log(date);
+      try{
+          let formData = new FormData()
+          formData.append('name', date.name)
+          formData.append('userName', date.userName)
+          formData.append('email', date.email)
+          formData.append('phone', date.phone)
+          formData.append('password', date.password)
+          formData.append('cPassword', date.cPassword)
+          formData.append('image', date.image)
+
+          const res = await fetch('http://localhost:5007/admin',{
+              method: "POST",
+              body: formData,
+          });
+          if(res.ok){
+              setDate({name: '', userName:'', email:'', phone:'', password:'', cPassword:'', image:''});
+              navigate('/admin');
+          }
+      }catch(err){
+          console.log(err)
+      }
+  };
  
-
-  const handleAddAdmin=(e)=>{
-     const name = nameRef.current.value;
-     const userName = userNameRef.current.value;
-     const email = emailRef.current.value;
-     const phone = phoneRef.current.value;
-     const password = passwordRef.current.value;
-     const cPass = cPasswordRef.current.value;
-     const image = imageRef.current.value;
-
-    if(password!==cPass){
-      return setIsError("Confirm password & password are note match")
-    }
-     const NFTs = {name, userName, email, phone, password, cPass, image};
-     fetch('http://localhost:5007/creators',{
-       method: 'POST',
-       headers:{
-         'content-type': 'application/json'
-       },
-       body: JSON.stringify(NFTs)
-     })
-     .then()
-
-     e.preventDefault();
-  }
-
 
   return (
     <div className='dialogDiv'>
@@ -69,41 +80,88 @@ export default function AdminPopUp({open, handleClose}) {
 
         <DialogContent>
         <DialogContentText id="alert-dialog-slide-description">
-        <form  
-        onSubmit={handleAddAdmin}
-        encType="multipart/form-data"
-        >
+        <form action="" onSubmit={handleSubmit}>
          <div className="row addAdminDiv">
              <div className="col-lg-8">
                  <p>Full Name</p>
-                 <input type="text" ref={nameRef}/> <br />
+                 <input 
+                  className='form-control'
+                  placeholder='Enter name'
+                  type="text" 
+                  name="name"
+                  value={date.name}
+                  onChange={(e)=>handleChange(e, "name")}
+
+                  /> <br />
+
                  <p>User Name</p>
-                 <input type="text" name="" id="" ref={userNameRef}/>
+                 <input 
+                  className='form-control'
+                  placeholder='Enter username'
+                  type="text" 
+                  name="userName"
+                  value={date.userName}
+                  onChange={(e)=>handleChange(e, 'userName')}
+
+                 />
                  <p>Email</p>
-                 <input type="email" required ref={emailRef}/>
+                 <input 
+                  className='form-control'
+                  placeholder='Enter email'
+                  type="email" 
+                  name="email"
+                  value={date.email}
+                  onChange={(e)=>handleChange(e, 'email')}
+
+                 />
                  <p>Phone</p>
                  <PhoneInput
                     international
-                    countryCallingCodeEditable={false}
+                    countryCallingCodeEditable={true}
                     defaultCountry="RU"
-                    value={value}
-                    onChange={setValue}
-                    ref={phoneRef}
-                    error={value ? (isValidPhoneNumber(value) ? undefined : 'Invalid phone number') : 'Phone number required'}
+                    className='form-control'
+                    type="text" 
+                    name="phone"
+                    value={date.phone}
+                    onChange={(e)=>handleChange(e,'phone')}
+                    
+                    error={date.phone ? (isValidPhoneNumber(date.phone) ? undefined : 'Invalid phone number') : 'Phone number required'}
                     />
                 <p>Password</p>
-                <input type="password" ref={passwordRef}/>
+                <input 
+                className='form-control'
+                placeholder='Enter email'
+                type="text" 
+                name="password"
+                value={date.password}
+                onChange={(e)=>handleChange(e, 'password')}
+
+                 />
                 <p>Re Enter Password</p>
-                <input type="password" ref={cPasswordRef}/>
-                <p className='errorText'>{isError}</p>
+                <input 
+                className='form-control'
+                placeholder='Confirm password'
+                type="text" 
+                name="cPassword"
+                value={date.cPassword}
+                onChange={(e)=>handleChange(e, 'cPassword')}
+
+                 />
              </div>
               <div className="col-lg-4">
                   <p>Image</p>
                   <img className='addAdminImg' src={imgAdd} alt="" /> <br />
-                  <input type="file" ref={imageRef}  className='text-white'/>
+                  <input 
+                      className='form-control'
+                      type="file" 
+                      accept='image/*'
+                      name="image"
+                      onChange={(e)=> handleChange(e, 'image')}
+
+                   />
 
               </div>
-             <button className='adminBtnAdd'>Add</button>
+             <input type="submit" value="add" className='adminBtnAdd' />
          </div>
          </form>
        </DialogContentText>

@@ -74,7 +74,7 @@ const Admin = () => {
            {
            admin.map(admins =>(
               <tr className='tableRow'>
-                <td> <img className='imgAdmin' src={admins.image} alt="" /></td>
+                <td> <img className='imgAdmin' src={admins.avatar} alt="" /></td>
                 <td>{admins.userName}</td>
                 <td>{admins.email}</td>
                 <td>{admins.phone}</td>

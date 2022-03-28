@@ -10,7 +10,7 @@ const Creator = () => {
   const [deleteOrders, setDeleteOrders]= React.useState()
 
   useEffect(()=>{
-    fetch('http://localhost:5000/creators')
+    fetch('http://localhost:5007/creator')
     .then(res=> res.json())
     .then(data => setCreators(data))
   },[deleteOrders])
@@ -18,7 +18,7 @@ const Creator = () => {
   const handleOrderDelete = (id) =>{
     const confirmDelete = window.confirm('Are you sure, you want to delete this Orders? Please Check it again')
     if(confirmDelete){
-       fetch(`http://localhost:5000/creators/${id}`, {
+       fetch(`http://localhost:5000/creator/${id}`, {
            method: 'DELETE',
            headers:{"content-type": "application/json"}
        })

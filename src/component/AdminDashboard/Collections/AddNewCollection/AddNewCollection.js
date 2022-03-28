@@ -1,63 +1,88 @@
 import React, {useEffect, useState} from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const AddNewCollection = () => {
-    const [body, setBody] = useState("");
     const [tokens, setTokens] = useState([]);
-    const [Collections, setCollections] = React.useState({}); 
-
+    const navigate = useNavigate();
+    const [message, setMessage] = useState('');
+    const [body, setBody] = useState("");
+    
     const handleBody = e =>{
         console.log(e);
         setBody(e);
     }
 
     useEffect(()=>{
-      fetch("http://localhost:5007/Tokens")
+      fetch("http://localhost:5007/tokens")
       .then(res => res.json())
       .then(data => setTokens(data))
     },[])
 
 
-    const onCollectionBlur = e =>{
-      const field = e.target.name;
-      const value = e.target.value;
-      const newCollections = {...Collections};
-      newCollections[field]=value;
-      setCollections(newCollections);
-      console.log(newCollections)
-  }
-
-    const handleSubmit = e =>{
-
-      const logo = Collections.logo;
-      const FeaturedImg = Collections.FeaturedImg;
-      const bannerImg = Collections.bannerImg;
-      const collectionName = Collections.collectionName;
-      const url = Collections.url;
-      const description = Collections.description;
-      const category = Collections.category;
-      const yoursite = Collections.yoursite;
-      const discord = Collections.discord;
-      const instagram = Collections.instagram;
-      const medium = Collections.medium;
-      const telegam = Collections.telegam;
-      const creatorEarning = Collections.creatorEarning;
-      const blockchain = Collections.blockchain;
-      const paymentToken = Collections.paymentToken;
     
-      const creator = {logo, FeaturedImg, bannerImg , collectionName, url, description, category, yoursite, discord, instagram, medium, telegam, creatorEarning, blockchain, paymentToken};
-      fetch('http://localhost:5007/collections',{
-        method: 'POST',
-        headers:{
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify(creator)
-      })
-      .then()
+  const [date, setDate] = useState({
+      logo:'',
+      FeaturedImg:'',
+      bannerImg:'',
+      collectionName:'',
+      url:'',
+      description:'',
+      category:'',
+      yoursite:'',
+      discord:'',
+      instagram:'',
+      medium:'',
+      telegam:'',
+      creatorEarning:'',
+      blockchain:'',
+      paymentToken:'',
+      
+  });
+  const handleChange=(e, name) =>{
+      let value = name === "yoursite" ? e.target.files[0] : e.target?.value ;
     
-    }
+        setDate({...date, [name]: value});
+
+      
+      
+  };
+  const handleSubmit = async(e)=>{
+    e.preventDefault()
+    console.log(date);
+      try{
+          let formData = new FormData()
+          formData.append('logo', date.logo)
+          formData.append('FeaturedImg', date.FeaturedImg)
+          formData.append('bannerImg', date.bannerImg)
+          formData.append('collectionName', date.collectionName)
+          formData.append('url', date.url)
+          formData.append('description', date.description)
+          formData.append('category', date.category)
+          formData.append('yoursite', date.yoursite)
+          formData.append('discord', date.discord)
+          formData.append('instagram', date.instagram)
+          formData.append('medium', date.medium)
+          formData.append('telegam', date.telegam)
+          formData.append('creatorEarning', date.creatorEarning)
+          formData.append('blockchain', date.blockchain)
+          formData.append('paymentToken', date.paymentToken)
+
+          const res = await fetch('http://localhost:5007/collection',{
+              method: "POST",
+              body: formData,
+          });
+          if(res.ok){
+              setDate({logo: '', FeaturedImg:'', bannerImg:'', collectionName:'', url:'', description:'', category:'', yoursite:'', discord:'',  instagram:'', medium:'', telegam:'', creatorEarning:'', blockchain:'', paymentToken:'',});
+              navigate('/admin/collections');
+              setMessage('New Creator added successfully!')
+          }
+      }catch(err){
+          console.log(err)
+      }
+  };
 
     return (
         <div>
@@ -71,9 +96,10 @@ const AddNewCollection = () => {
            </div>
            <div className="choseDiv">
            <input type="file"
-            onBlur={onCollectionBlur}
+            className='form-control collectionInput text-white'
+            accept='logo/*'
             name="logo"
-            className='text-white'
+            onBlur={(e)=> handleChange(e, 'logo')}
             />
           </div>
         </div>
@@ -87,9 +113,10 @@ const AddNewCollection = () => {
            <div className="choseDiv">
            <input 
             type="file" 
-            onBlur={onCollectionBlur}
             name="FeaturedImg"
-            className='text-white'
+            className='form-control collectionInput text-white'
+            accept='FeaturedImg/*'
+            onBlur={(e)=> handleChange(e, 'FeaturedImg')}
             />
            
            </div>
@@ -104,9 +131,10 @@ const AddNewCollection = () => {
            <div className="choseDiv">
            <input 
            type="file" 
-           onBlur={onCollectionBlur}
            name="bannerImg"
-           className='text-white'
+           className='form-control collectionInput text-white'
+           accept='bannerImg/*'
+           onBlur={(e)=> handleChange(e, 'bannerImg')}
            />           
            
            </div>
@@ -117,9 +145,11 @@ const AddNewCollection = () => {
                   </div>
               <input 
                 type="text" 
-                className='creatorInput'
-                onBlur={onCollectionBlur}
                 name="collectionName"
+                className='form-control collectionInput'
+                placeholder='Enter collection'
+                value={date.collectionName}
+                onBlur={(e)=>handleChange(e, "collectionName")}
                />
             </div>
 
@@ -129,11 +159,12 @@ const AddNewCollection = () => {
                 <p className='text-start'><small>Customize your URL. Must only contain lowercase letters,numbers, and hyphens.</small></p>
                   </div>
                 <input 
-                  type="text" 
-                  className='creatorInput' 
-                  placeholder='https://physicalnft.org/collections/' 
-                  onBlur={onCollectionBlur}
-                  name="url"
+                type="text" 
+                name="url"
+                className='form-control collectionInput'
+                placeholder='Enter url'
+                value={date.url}
+                onBlur={(e)=>handleChange(e, "url")}
                 />
             </div>
 
@@ -144,10 +175,11 @@ const AddNewCollection = () => {
                   placeholder='write your item description'
                   modules={AddNewCollection.modules}
                   formats={AddNewCollection.formats}
-                  onChange={handleBody}
-                  value={body}
-                  onBlur={onCollectionBlur}
+                  type="text" 
                   name="description"
+                  className='form-control'
+                  value={date.description}
+                  onBlur={(e)=>handleChange(e, "description")}
                 />
             </div>
 
@@ -158,9 +190,12 @@ const AddNewCollection = () => {
             </div>
             <select 
               id="cars" 
-              className='collectionInputSelect'
-              onBlur={onCollectionBlur}
+              type="text" 
               name="category"
+              className='form-control collectionInputSelect'
+              placeholder='Enter category'
+              value={date.category}
+              onBlur={(e)=>handleChange(e, "category")}
             >
               <option value="Art" className='text-black'>Art</option>
               <option value="Music" className='text-black'>Music</option>
@@ -174,51 +209,56 @@ const AddNewCollection = () => {
                    <p className="d-flex">
                    <span className='iconCreator'><i class="fas fa-globe-africa"></i></span>
                    <input 
-                    className="collectionInput" 
                     type="text" 
-                    placeholder='Link twitter profile' 
-                    onBlur={onCollectionBlur}
                     name="yoursite"
+                    className='form-control collectionInput'
+                    placeholder='Enter yoursite'
+                    value={date.yoursite}
+                    onBlur={(e)=>handleChange(e, "yoursite")}
                    />
                    </p>
                    <p className="d-flex">
                    <span className='iconCreator'><i class="fab fa-discord"></i></span>
                    <input 
-                    className="collectionInput" 
                     type="text" 
                     placeholder='Link instagram profile' 
-                    onBlur={onCollectionBlur}
                     name="discord"
+                    className='form-control collectionInput'
+                    value={date.yoursite}
+                    onBlur={(e)=>handleChange(e, "yoursite")}
                    />
                    </p>
                    <p className="d-flex">
                    <span className='iconCreator'><i class="fab fa-instagram"></i></span>
                    <input 
-                    className="collectionInput" 
                     type="text" 
                     placeholder='Link your website' 
-                    onBlur={onCollectionBlur}
                     name="instagram"
+                    className='form-control collectionInput'
+                    value={date.instagram}
+                    onBlur={(e)=>handleChange(e, "instagram")}
                    />
                    </p>
                    <p className="d-flex">
                    <span className='iconCreator'><i class="fab fa-medium-m"></i></span>
                    <input 
-                    className="collectionInput" 
                     type="text" 
                     placeholder='Link your website' 
-                    onBlur={onCollectionBlur}
                     name="medium"
+                    className='form-control collectionInput'
+                    value={date.medium}
+                    onBlur={(e)=>handleChange(e, "medium")}
                    />
                    </p>
                    <p className="d-flex">
                    <span className='iconCreator'><i class="fab fa-telegram-plane"></i></span>
                    <input 
-                    className="collectionInput" 
                     type="text" 
-                    placeholder='Link your website' 
-                    onBlur={onCollectionBlur}
+                    placeholder='Link your talegram' 
                     name="telegam"
+                    className='form-control collectionInput'
+                    value={date.telegam}
+                    onBlur={(e)=>handleChange(e, "telegam")}
                    />
                    </p>
             </div>
@@ -230,10 +270,11 @@ const AddNewCollection = () => {
                   </div>
                 <input 
                  type="text" 
-                 className='creatorInput' 
                  placeholder='e.g.2.5' 
-                 onBlur={onCollectionBlur}
                  name="creatorEarning"
+                 className='form-control collectionInput'
+                 value={date.creatorEarning}
+                 onBlur={(e)=>handleChange(e, "creatorEarning")}
                  />
             </div>
 
@@ -244,10 +285,11 @@ const AddNewCollection = () => {
             <div className='blockchainInput'>
             <select 
               id="cars" 
-              className='collectionInputSelect' 
               placeholder="Select one"
-              onBlur={onCollectionBlur}
               name="blockchain"
+              className='form-control collectionInputSelect'
+              value={date.blockchain}
+              onBlur={(e)=>handleChange(e, "blockchain")}
             >
               <option value="Music" className='text-black'>Binance Smart Chain</option>
               <option value="Video" className='text-black'>Polygon</option>
@@ -262,10 +304,12 @@ const AddNewCollection = () => {
             </div>
             <div className='blockchainInput'>
             <select 
-              id="cars" 
-              className='collectionInputSelect'
-              onBlur={onCollectionBlur}
+            id="cars" 
+              placeholder="Select one"
               name="paymentToken"
+              className='form-control collectionInputSelect'
+              value={date.paymentToken}
+              onBlur={(e)=>handleChange(e, "paymentToken")}
               >
                {
                 tokens.map(name => (

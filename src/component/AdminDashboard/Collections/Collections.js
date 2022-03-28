@@ -10,7 +10,7 @@ const Collections = () => {
     const [deleteOrders, setDeleteOrders]= React.useState()
 
     useEffect(()=>{
-      fetch('http://localhost:5007/collections')
+      fetch('http://localhost:5007/collection')
       .then(res => res.json())
       .then(data => setCollections(data))
     },[deleteOrders])
@@ -18,7 +18,7 @@ const Collections = () => {
     const handleOrderDelete = (id) =>{
       const confirmDelete = window.confirm('Are you sure, you want to delete this Orders? Please Check it again')
       if(confirmDelete){
-         fetch(`http://localhost:5007/collections/${id}`, {
+         fetch(`http://localhost:5007/collection/${id}`, {
              method: 'DELETE',
              headers:{"content-type": "application/json"}
          })

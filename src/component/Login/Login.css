@@ -12,10 +12,38 @@
     align-items: center;
     justify-content: center;
 }
+.user input{
+    width: 100%;
+}
+.user i{
+    color: white;
+    margin-left: -0.5rem;
+}
+.pass i{
+    color: white;
+    margin-left: -0.5rem;
+}
 .pass{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.pass input{
+    width: 100%;
+}
+.iconBox{
+    width: 2rem;
+    background-color: #232741;
+    margin-top: 1rem;
+    padding: 6px 20px;
+}
+.iconBoxBtn{
+    width: 2rem;
+    background-color: #232741;
+    padding: 6px 20px;
+}
+.iconBoxBtn i{
+    margin-left: -0.5rem;
 }
 
 .logoLogin{
@@ -24,7 +52,11 @@
   justify-content: center;
   width: 100%;
   border-bottom: 0.5px solid #3a405d;
+  flex-direction: column;
+}
 
+.logoLogin h1{
+    margin-top: -1rem;
 }
 
 .loginLogoImg{
@@ -34,7 +66,7 @@
 }
 .login{
     background-color: #272D47;
-    padding: 20px;
+    padding: 40px;
     width: 40%;
     border-radius: 20px;
 }
@@ -46,4 +78,22 @@
     color: white;
     padding: 5px;    
     
+}
+.forgotPass{
+    color: #dad5d5;
+    margin-top: 0.7rem;
+}
+.loginBtn{
+    background-color: #6958BE;
+    color: white;
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+a{
+    text-decoration: none;
+}
+.forgotPass:hover{
+    color: #705EC8;
 }

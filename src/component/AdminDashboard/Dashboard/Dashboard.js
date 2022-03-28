@@ -22,13 +22,13 @@ const Dashboard = () => {
       },[])
 
     useEffect(()=>{
-        fetch('http://localhost:5007/collections')
+        fetch('http://localhost:5007/collection')
         .then(res => res.json())
         .then(data => setCollections(data))
       },[])
 
     useEffect(()=>{
-        fetch('http://localhost:5007/creators')
+        fetch('http://localhost:5007/creator')
         .then(res => res.json())
         .then(data => setCreators(data))
       },[])
